@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --surface-primary: #fff;
+  --surface-secondary: #ededed;
+  --surface-border: #eee;
+  --text-primary: #101010;
+  --text-secondary-light: #949494;
+  --text-secondary-dark: #525252;
+  --text-link: #0099ff;
+  --text-link-hover: #0088ff;
+}
+
+body,
+footer {
+  font-family: "Instrument Sans", Arial, Helvetica, sans-serif;
+  color: var(--text-primary, #101010);
+  background-color: var(--surface-primary, #fff);
+}
+
+main {
+  padding: 80px 40px 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 70px;
+}
+
+div.callout {
+  background-color: var(--surface-secondary, #ededed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h2.eyebrow {
+  font-size: 15px;
+  font-family: "IBM Plex Mono", "Courier New", Courier, monospace;
+  color: var(--text-secondary-light, #949494);
+  text-transform: uppercase;
+}
+
+h2.eyebrow,
+p.caption,
+figcaption,
+p.small-text {
+  line-height: 20px;
+}
+
+h3 {
+  font-weight: 600;
+  line-height: 26px;
+}
+
+h3,
+p.large-text {
+  font-size: 18px;
+}
+
+p.large-text {
+  line-height: 24px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+p.caption,
+figcaption {
+  color: var(--text-secondary-light, #949494);
+}
+
+p.caption,
+figcaption {
+  text-align: center;
+}
+
+p.small-text {
+  font-size: 14px;
+}
+
+p.small-text {
+  color: var(--text-secondary-dark, #303030);
+}
+
+a {
+  color: var(--text-link, #0099ff);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text-link-hover, #0088ff);
+  text-decoration: underline;
+}
+
+.page-content {
+  margin-top: 17px;
+  width: 100%;
+  max-width: 700px;
+}
+
+img {
+  text-transform: lowercase;
+  color: var(--text-primary, #101010);
+  font-size: 15px;
+}
+
+@media screen and (max-width: 449px) {
+  h1 {
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p.large-text {
+    line-height: 25px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
