@@ -1,0 +1,99 @@
+.page-content,
+#intro {
+  display: flex;
+}
+
+.page-content {
+  flex-direction: column;
+  gap: 15px;
+}
+
+#intro {
+  height: fit-content;
+  margin-bottom: 15px;
+}
+
+#img-container {
+  position: relative;
+  width: fit-content;
+  height: 340px;
+}
+
+#polaroid {
+  object-fit: contain;
+  width: 296px;
+  height: 398px;
+  transform: translate(-18px, -30px);
+}
+
+.sticker {
+  position: absolute;
+  transition: 300ms ease-in;
+}
+
+.sticker:hover {
+  transition: 300ms ease-out;
+}
+
+#ice-cream {
+  width: 32px;
+  height: 57px;
+  bottom: 20px;
+  right: 63px;
+  transform: rotate(10deg);
+}
+
+#ice-cream:hover {
+  transform: rotate(-10deg);
+}
+
+#rainbow {
+  width: 52px;
+  height: 40px;
+  bottom: -2px;
+  right: 12px;
+}
+
+#rainbow:hover {
+  transform: rotate(12deg);
+}
+
+.textbox {
+  background-color: #fafafa;
+  border: var(--surface-border, #eee) 1px solid;
+  border-radius: 2px;
+  width: 100%;
+  padding: 20px 25px;
+}
+
+h1,
+h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+p:not(p:last-of-type) {
+  margin-bottom: 12px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+@media screen and (max-width: 749px) {
+  #intro {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  #img-container {
+    margin: 0 auto 15px;
+  }
+}
+
+@media screen and (max-width: 449px) {
+  h1,
+  h2 {
+    font-size: 18px;
+  }
+}
