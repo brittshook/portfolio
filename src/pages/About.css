@@ -1,19 +1,20 @@
-.page-content,
-#intro {
+#about .page-content,
+#about .intro {
   display: flex;
 }
 
-.page-content {
+#about .page-content {
   flex-direction: column;
   gap: 15px;
 }
 
-#intro {
+#about .intro {
+  flex-direction: row;
   height: fit-content;
   margin-bottom: 15px;
 }
 
-#img-container {
+.img-container {
   position: relative;
   width: fit-content;
   height: 340px;
@@ -66,18 +67,13 @@
   padding: 20px 25px;
 }
 
-h1,
-h2 {
+.small-header {
   font-size: 16px;
   margin-bottom: 10px;
 }
 
-p:not(p:last-of-type) {
+#about p:not(p:last-of-type) {
   margin-bottom: 12px;
-}
-
-.italic {
-  font-style: italic;
 }
 
 @media screen and (max-width: 749px) {

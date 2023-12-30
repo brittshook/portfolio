@@ -1,5 +1,5 @@
-a,
-a:hover {
+#details a,
+#details a:hover {
   color: var(--text-primary, #101010);
 }
 

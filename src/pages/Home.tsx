@@ -4,10 +4,10 @@ import "./Home.css";
 
 export const Home = () => {
   return (
-    <main>
+    <main id="home">
       <NavBar type="main" onSelectItem={() => {}} />
       <div className="page-content">
-        <section id="intro">
+        <section className="intro">
           <h1>Britt Shook</h1>
           <p>
             Full-stack software engineer and compassionate problem-solver,

@@ -3,11 +3,11 @@ import "./About.css";
 
 export const About = () => {
   return (
-    <main>
+    <main id="about">
       <NavBar type="main" onSelectItem={() => {}} />
       <div className="page-content">
-        <div id="intro">
-          <div id="img-container">
+        <div className="intro">
+          <div className="img-container">
             <img
               id="polaroid"
               src="images/britt_polaroid.png"
@@ -27,7 +27,9 @@ export const About = () => {
             />
           </div>
           <div className="textbox">
-            <h1>I haven't always seen myself as a creative–</h1>
+            <h1 className="small-header">
+              I haven't always seen myself as a creative–
+            </h1>
             <p>
               In another life, I studied the{" "}
               <a
@@ -59,7 +61,7 @@ export const About = () => {
           </div>
         </div>
         <div className="textbox">
-          <h2>My design ethos is...</h2>
+          <h2 className="small-header">My design ethos is...</h2>
           <p>
             <span className="italic">Authenticity</span>
             <br />
@@ -91,17 +93,17 @@ export const About = () => {
           </p>
         </div>
         <div className="textbox">
-          <h2>I'm a T-shaped designer who…</h2>
+          <h2 className="small-header">I'm a T-shaped designer who…</h2>
           <p>
             has a breadth of skills across <a>content design</a>,{" "}
-            <a>product design</a>, and
-            <a>web development</a>, with deep expertise in content strategy,
-            information architecture, web accessibility, and design thinking.
+            <a>product design</a>, and <a>web development</a>, with deep
+            expertise in content strategy, information architecture, web
+            accessibility, and design thinking.
           </p>
         </div>
         <div className="textbox">
           {" "}
-          <h2>In my downtime, I...</h2>
+          <h2 className="small-header">In my downtime, I...</h2>
           <p>
             am a vegan dessert connoisseur,{" "}
             <a

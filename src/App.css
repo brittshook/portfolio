@@ -123,6 +123,10 @@ img {
   font-size: 15px;
 }
 
+.italic {
+  font-style: italic;
+}
+
 @media screen and (max-width: 449px) {
   h1 {
     font-size: 22px;

@@ -1,18 +1,18 @@
-.page-content,
-#intro {
+#home .page-content,
+#home .intro {
   display: flex;
   flex-direction: column;
 }
 
-.page-content {
+#home .page-content {
   gap: 50px;
 }
 
-#intro {
+#home .intro {
   gap: 10px;
 }
 
-p:last-child {
+#home .intro p:last-child {
   color: var(--text-secondary-dark, #303030);
   margin-top: 8px;
 }
