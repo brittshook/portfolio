@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css";
 import "./Button.css";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   type: "submit" | "reset" | "button";
@@ -10,7 +11,8 @@ interface Props {
   children?: string;
   showText?: boolean;
   showTooltip?: boolean;
-  onClick: () => void;
+  goToInternalPage?: string;
+  goToExternalPage?: string;
 }
 
 export const Button = ({
@@ -20,7 +22,8 @@ export const Button = ({
   children,
   showText,
   showTooltip,
-  onClick,
+  goToInternalPage,
+  goToExternalPage
 }: Props) => {
   const buttonRef = useRef(null);
 
@@ -34,8 +37,18 @@ export const Button = ({
     }
   }, [children, showTooltip]);
 
+  const navigate = useNavigate();
+  const handleClick = () => {
+    {
+      goToInternalPage && navigate(goToInternalPage);
+    }
+    {
+      goToExternalPage && window.open(goToExternalPage, "_blank");
+    }
+  };
+
   return (
-    <button ref={buttonRef} type={type} onClick={() => onClick()}>
+    <button ref={buttonRef} type={type} onClick={handleClick}>
       {showText && children}
       {imgSrc != null && <img src={imgSrc} alt={altText || ""} />}
     </button>

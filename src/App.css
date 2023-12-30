@@ -127,6 +127,12 @@ img {
   font-style: italic;
 }
 
+button,
+a,
+.has-click-event {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 449px) {
   h1 {
     font-size: 22px;

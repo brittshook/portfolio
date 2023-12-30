@@ -1,10 +1,15 @@
+import { useEffect } from "react";
 import { NavBar } from "../components/NavBar";
 import "./About.css";
 
 export const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main id="about">
-      <NavBar type="main" onSelectItem={() => {}} />
+      <NavBar type="main" />
       <div className="page-content">
         <div className="intro">
           <div className="img-container">

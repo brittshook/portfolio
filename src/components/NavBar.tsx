@@ -1,16 +1,21 @@
-import { useState } from "react";
 import { Button } from "./Button";
 import "./NavBar.css";
+import { Link, useLocation } from "react-router-dom";
 
 interface Props {
-  type: string;
-  items?: string[];
-  onSelectItem: (item: string) => void;
+  type: "main" | "sub";
+  items?: [string, string][];
 }
 
-export const NavBar = ({ type, items, onSelectItem }: Props) => {
-  const navItems = items || ["Home", "About", "Work", "Resume", "Contact"];
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+export const NavBar = ({ type, items }: Props) => {
+  const navItems = items || [
+    ["Home", "/"],
+    ["About", "/about"],
+    ["Work", "/work"],
+    ["Resume", "/resume"],
+    ["Contact", "/contact"],
+  ];
+  const location = useLocation();
 
   return (
     <nav>
@@ -19,20 +24,22 @@ export const NavBar = ({ type, items, onSelectItem }: Props) => {
           type="button"
           imgSrc="images/back.svg"
           altText="go back home"
-          onClick={() => {}}
+          goToInternalPage="/"
         />
       )}
       <ul>
-        {navItems.map((item, index) => (
+        {navItems.map(([item, path]) => (
           <li
-            className={selectedIndex === index ? "nav-link active" : "nav-link"}
+            className={
+              location.pathname == path ? "nav-link active" : "nav-link"
+            }
             key={item}
-            onClick={() => {
-              setSelectedIndex(index);
-              onSelectItem(item);
-            }}
           >
-            {item}
+            {path.startsWith("/") ? (
+              <Link to={path}>{item}</Link>
+            ) : (
+              <a href={path}>{item}</a>
+            )}
           </li>
         ))}
       </ul>

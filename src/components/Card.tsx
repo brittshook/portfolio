@@ -1,10 +1,14 @@
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "./Button";
 import "./Card.css";
 
 interface Props {
   showCaseStudyButton?: boolean;
+  caseStudyPath?: string;
   showDemoButton?: boolean;
+  demoLink?: string;
   showGitHubButton?: boolean;
+  githubRepoLink?: string;
   title: string;
   description: string;
   imageSrc: string;
@@ -14,23 +18,41 @@ interface Props {
 
 export const Card = ({
   showCaseStudyButton,
+  caseStudyPath,
   showDemoButton,
+  demoLink,
   showGitHubButton,
+  githubRepoLink,
   title,
   description,
   imageSrc,
   altText,
   onSelectItem,
 }: Props) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    {
+      caseStudyPath && navigate(caseStudyPath);
+    }
+    {
+      demoLink && window.open(demoLink, "_blank");
+    }
+  };
+
   return (
     <div onClick={() => onSelectItem}>
       <div className="callout">
-        <img src={imageSrc} alt={altText}></img>
+        <img src={imageSrc} alt={altText} onClick={handleClick} className="has-click-event"></img>
       </div>
       <div id="info">
         <div id="details">
           <p className="title">
-            <a href="">{title}</a>
+            {caseStudyPath && <Link to={caseStudyPath}>{title}</Link>}
+            {demoLink && (
+              <a href={demoLink} target="_blank">
+                {title}
+              </a>
+            )}
           </p>
           <p className="description">{description}</p>
         </div>
@@ -40,8 +62,8 @@ export const Card = ({
               type="button"
               imgSrc="icons/github.svg"
               altText="github"
-              onClick={() => {}}
               showTooltip={true}
+              goToExternalPage={githubRepoLink}
             >
               Github
             </Button>
@@ -51,8 +73,8 @@ export const Card = ({
               type="button"
               imgSrc="icons/arrow_right.svg"
               altText="case study"
-              onClick={() => {}}
               showTooltip={true}
+              goToInternalPage={caseStudyPath}
             >
               Case Study
             </Button>
@@ -62,8 +84,8 @@ export const Card = ({
               type="button"
               imgSrc="icons/arrow_topright.svg"
               altText="demo"
-              onClick={() => {}}
               showTooltip={true}
+              goToExternalPage={demoLink}
             >
               Demo
             </Button>
