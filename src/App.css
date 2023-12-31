@@ -70,8 +70,12 @@ p.small-text {
 }
 
 h3 {
-  font-weight: 600;
   line-height: 26px;
+}
+
+h3,
+.bold {
+  font-weight: 600;
 }
 
 h3,
@@ -117,6 +121,8 @@ a:hover {
 }
 
 .page-content {
+  display: flex;
+  flex-direction: column;
   margin-top: 17px;
   width: 100%;
   max-width: 700px;
@@ -142,6 +148,11 @@ a,
   width: fit-content;
   display: flex;
   gap: 12px;
+}
+
+.case-headers {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 @media screen and (max-width: 449px) {

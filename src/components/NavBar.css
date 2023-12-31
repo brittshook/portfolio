@@ -13,6 +13,7 @@ nav > ul {
   flex-direction: column;
   gap: 20px;
   list-style: none;
+  text-align: right;
 }
 
 .nav-link a {
@@ -20,7 +21,6 @@ nav > ul {
   line-height: 22px;
   color: var(--text-secondary-light, #949494);
   text-transform: capitalize;
-  text-align: right;
 }
 
 .nav-link a:hover {
@@ -31,6 +31,12 @@ nav > ul {
 .nav-link.active a {
   font-weight: 600;
   color: var(--text-primary, #101010);
+}
+
+nav button {
+  margin-bottom: 20px;
+  margin-left: auto;
+  width: 45px;
 }
 
 @media screen and (max-width: 450px) {

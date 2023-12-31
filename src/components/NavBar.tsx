@@ -22,7 +22,7 @@ export const NavBar = ({ type, items }: Props) => {
       {type == "sub" && (
         <Button
           type="button"
-          imgSrc="images/back.svg"
+          imgSrc="/icons/arrow_left.svg"
           altText="go back home"
           goToInternalPage="/"
         />
