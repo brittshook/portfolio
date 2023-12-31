@@ -4,7 +4,6 @@ import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { Home } from "./pages/Home";
 import { Work } from "./pages/work/Index";
-import { AirQualityAPI } from "./pages/work/AirQualityAPI";
 import { MahaliaXiaoqi } from "./pages/work/MahaliaXiaoqi";
 import { PridePac } from "./pages/work/PridePac";
 import { StateMedicaidAgency } from "./pages/work/StateMedicaidAgency";
@@ -21,10 +20,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/work" element={<Work />} />
-          <Route
-            path="/work/air-quality-api"
-            element={<AirQualityAPI />}
-          />{" "}
           <Route path="/work/mahalia-xiaoqi" element={<MahaliaXiaoqi />} />
           <Route path="/work/pride-pac" element={<PridePac />} />
           <Route
