@@ -7,13 +7,13 @@ interface Props {
   caseStudyPath?: string;
   showDemoButton?: boolean;
   demoLink?: string;
-  showGitHubButton?: boolean;
+  showGithubButton?: boolean;
   githubRepoLink?: string;
   title: string;
   description: string;
   imageSrc: string;
   altText: string;
-  onSelectItem: (item: string) => void;
+  categories?: string[];
 }
 
 export const Card = ({
@@ -21,13 +21,12 @@ export const Card = ({
   caseStudyPath,
   showDemoButton,
   demoLink,
-  showGitHubButton,
+  showGithubButton,
   githubRepoLink,
   title,
   description,
   imageSrc,
   altText,
-  onSelectItem,
 }: Props) => {
   const navigate = useNavigate();
   const handleClick = () => {
@@ -40,9 +39,14 @@ export const Card = ({
   };
 
   return (
-    <div onClick={() => onSelectItem}>
+    <div>
       <div className="callout">
-        <img src={imageSrc} alt={altText} onClick={handleClick} className="has-click-event"></img>
+        <img
+          src={imageSrc}
+          alt={altText}
+          onClick={handleClick}
+          className="has-click-event"
+        ></img>
       </div>
       <div id="info">
         <div id="details">
@@ -57,7 +61,7 @@ export const Card = ({
           <p className="description">{description}</p>
         </div>
         <div className="btn-container">
-          {showGitHubButton && (
+          {showGithubButton && (
             <Button
               type="button"
               imgSrc="icons/github.svg"

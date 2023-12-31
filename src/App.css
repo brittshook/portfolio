@@ -25,9 +25,14 @@ body {
 
 body,
 footer {
-  font-family: "Instrument Sans", Arial, Helvetica, sans-serif;
   color: var(--text-primary, #101010);
   background-color: var(--surface-primary, #fff);
+}
+
+body,
+footer,
+button {
+  font-family: "Instrument Sans", Arial, Helvetica, sans-serif;
 }
 
 main {
@@ -131,6 +136,12 @@ button,
 a,
 .has-click-event {
   cursor: pointer;
+}
+
+.btn-container {
+  width: fit-content;
+  display: flex;
+  gap: 12px;
 }
 
 @media screen and (max-width: 449px) {

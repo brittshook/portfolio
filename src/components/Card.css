@@ -27,12 +27,6 @@
   margin-bottom: 10px;
 }
 
-.btn-container {
-  width: fit-content;
-  display: flex;
-  gap: 12px;
-}
-
 @media screen and (max-width: 449px) {
   .callout {
     height: 330px;

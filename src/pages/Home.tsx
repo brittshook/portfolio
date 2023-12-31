@@ -24,35 +24,32 @@ export const Home = () => {
         <Card
           showDemoButton={true}
           demoLink="test"
-          showGitHubButton={true}
+          showGithubButton={true}
           githubRepoLink="test"
           title="RESTful API for my hyper-local air quality data"
           description="Raspberry Pi, Python, Django, PostgreSQL"
           imageSrc="images/test.webp"
           altText="test"
-          onSelectItem={() => {}}
         />
         <Card
           showCaseStudyButton={true}
           caseStudyPath="/work/mahalia-xiaoqi"
-          showGitHubButton={true}
+          showGithubButton={true}
           githubRepoLink="https://github.com/brittshook/mahalia"
           title="Driving conversions in a bite-size tattoo portfolio with booking form"
           description="HTML, CSS, JavaScript"
           imageSrc="images/test.webp"
           altText="test"
-          onSelectItem={() => {}}
         />
         <Card
           showDemoButton={true}
           demoLink="test"
-          showGitHubButton={true}
+          showGithubButton={true}
           githubRepoLink="https://github.com/brittshook/pride-pac"
           title="Introducing Pride Pac: Queer-themed take on Pac-Man"
           description="HTML, JavaScript"
           imageSrc="images/test.webp"
           altText="test"
-          onSelectItem={() => {}}
         />
       </div>
     </main>

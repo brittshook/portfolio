@@ -1,0 +1,7 @@
+.filter-container span {
+  margin-right: 20px;
+}
+
+.filter-container .btn-container {
+  display: inline-flex;
+}
