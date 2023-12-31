@@ -19,7 +19,9 @@ export const Filter = ({ filterCategories, onSelectCategory }: Props) => {
             key={index}
             active={selectedIndex == index}
             onClick={() => {
-              setSelectedIndex(index);
+              selectedIndex != index
+                ? setSelectedIndex(index)
+                : setSelectedIndex(-1);
               onSelectCategory(category);
             }}
           >

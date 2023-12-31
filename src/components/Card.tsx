@@ -64,7 +64,7 @@ export const Card = ({
           {showGithubButton && (
             <Button
               type="button"
-              imgSrc="icons/github.svg"
+              imgSrc="/icons/github.svg"
               altText="github"
               showTooltip={true}
               goToExternalPage={githubRepoLink}
@@ -75,7 +75,7 @@ export const Card = ({
           {showCaseStudyButton && (
             <Button
               type="button"
-              imgSrc="icons/arrow_right.svg"
+              imgSrc="/icons/arrow_right.svg"
               altText="case study"
               showTooltip={true}
               goToInternalPage={caseStudyPath}
@@ -86,7 +86,7 @@ export const Card = ({
           {showDemoButton && (
             <Button
               type="button"
-              imgSrc="icons/arrow_topright.svg"
+              imgSrc="/icons/arrow_topright.svg"
               altText="demo"
               showTooltip={true}
               goToExternalPage={demoLink}
