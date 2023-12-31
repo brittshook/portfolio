@@ -1,7 +1,5 @@
-import React from 'react'
+type Props = {};
 
-export const Menu = () => {
-  return (
-    <div>Menu</div>
-  )
-}
+export const Insight = (props: Props) => {
+  return <div>Insight</div>;
+};

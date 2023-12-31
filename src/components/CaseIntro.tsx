@@ -1,7 +1,7 @@
 import { Team } from "./Team";
 import { Tools } from "./Tools";
 
-interface Props {
+type Props = {
   title: string;
   subtitle: string;
   imgSrc: string;

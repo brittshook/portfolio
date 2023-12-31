@@ -2,7 +2,7 @@ import { Button } from "./Button";
 import "./NavBar.css";
 import { Link, useLocation } from "react-router-dom";
 
-interface Props {
+type Props = {
   type: "main" | "sub";
   items?: [string, string][];
 }

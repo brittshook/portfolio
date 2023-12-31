@@ -1,6 +1,6 @@
 import "./Definition.css";
 
-interface Props {
+type Props = {
   emoji?: string;
   title: string;
   text: string;

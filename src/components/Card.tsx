@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "./Button";
 import "./Card.css";
 
-interface Props {
+type Props = {
   showCaseStudyButton?: boolean;
   caseStudyPath?: string;
   showDemoButton?: boolean;

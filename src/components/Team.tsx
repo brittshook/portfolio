@@ -2,11 +2,11 @@ import { useEffect, useRef } from "react";
 import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css";
 
-interface Props {
+type Props = {
   teamImgSrcs: string[];
   teamNames: string[];
   teamRoles?: string[];
-}
+};
 
 export const Team = ({ teamImgSrcs, teamNames, teamRoles }: Props) => {
   useEffect(() => {

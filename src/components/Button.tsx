@@ -4,7 +4,7 @@ import "tippy.js/dist/tippy.css";
 import "./Button.css";
 import { useNavigate } from "react-router-dom";
 
-interface Props {
+type Props = {
   type: "submit" | "reset" | "button";
   imgSrc?: string;
   altText?: string;

@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import "./SpeechBubble.css";
 
-interface Props {
+type Props = {
   children: ReactNode;
   color: string;
   orientation: "left" | "right";

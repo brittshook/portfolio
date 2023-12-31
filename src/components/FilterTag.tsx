@@ -1,10 +1,10 @@
 import "./FilterTag.css";
 
-interface Props {
+type Props = {
   children: string;
   active?: boolean;
   onClick: () => void;
-}
+};
 
 export const FilterTag = ({ children, active, onClick }: Props) => {
   return (

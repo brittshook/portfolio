@@ -2,10 +2,10 @@ import { FilterTag } from "./FilterTag";
 import "./Filter.css";
 import { useState } from "react";
 
-interface Props {
+type Props = {
   filterCategories: string[];
   onSelectCategory: (category: string | null) => void;
-}
+};
 
 export const Filter = ({ filterCategories, onSelectCategory }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
