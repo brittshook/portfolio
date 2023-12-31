@@ -37,7 +37,7 @@ export const WorkData = [
     showOnHomepage: true,
   },
   {
-    title: "TBD",
+    title: "Designing a cohesive experience across platforms with StravaFit",
     description: "React, TypeScript",
     imgSrc: "images/test.webp",
     altText: "test",

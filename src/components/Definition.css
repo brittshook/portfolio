@@ -1,0 +1,16 @@
+.definition {
+  background-color: var(--surface-secondary, #ededed);
+  padding: 30px;
+  border-radius: 2px;
+}
+
+.vr {
+  padding-left: 22px;
+  border-left: 2px var(--text-secondary-light, #949494) solid;
+}
+
+.definition > div:first-child {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}

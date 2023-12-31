@@ -28,7 +28,8 @@ export const StateMedicaidAgency = () => {
           subtitle="State Medicaid Agency"
           imgSrc="/images/state_medicaid_agency/cover.webp"
           altText="State Medicaid portal with system impacts warning banner"
-          description="I led a messaging strategy and developed UX content to communicate provider experience changes in an overhaul of a state Medicaid agency's health plans and its digital systems. For confidentiality, I have omited and replaced sensitive information, including the agency's name. Visuals are not finalized deliverables but rather recreations in Figma and other tools. They are not 1:1 representations, and none of the examples include real data."
+          description="I led a messaging strategy and developed UX content to communicate provider experience changes in an overhaul of a state Medicaid agency's health plans and its digital systems."
+          additionalDescription="For confidentiality, I have omitted and replaced sensitive information, including the agency's name. Visuals are not finalized deliverables but rather recreations in Figma and other tools. They are not 1:1 representations, and none of the examples include real data."
         />
         <section className="case-study-text">
           <section id="background">

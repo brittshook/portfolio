@@ -28,10 +28,10 @@ export const Team = ({ teamImgSrcs, teamNames, teamRoles }: Props) => {
   const imgRefs = teamNames?.map(() => useRef(null));
 
   const generateTooltipContent = (name: string, role: string | null) => {
-    let content = `<p class="bold">${name}</p>`;
+    let content = `<p class="bold tooltip">${name}</p>`;
 
     if (role) {
-      content += `<p class="italic">${role}</p>`;
+      content += `<p class="italic tooltip">${role}</p>`;
     }
 
     return content;

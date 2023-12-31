@@ -112,7 +112,7 @@ h1 {
 }
 
 h1,
-p.large-text {
+.large-text {
   line-height: 24px;
 }
 
@@ -131,7 +131,8 @@ img {
 h2.eyebrow,
 .case-headers p,
 p.caption,
-figcaption {
+figcaption,
+.secondary {
   color: var(--text-secondary-light, #949494);
 }
 
@@ -148,7 +149,7 @@ h3 {
 
 h3,
 h4,
-p.large-text {
+.large-text {
   font-size: 18px;
 }
 
@@ -157,12 +158,13 @@ p.large-text {
   margin-bottom: 15px;
 }
 
-p {
+p,
+span {
   font-size: 16px;
   line-height: 22px;
 }
 
-p:not(p:last-child),
+p:not(p:last-child):not(p.tooltip),
 ul:not(ul:last-child),
 ol:not(ul:last-child),
 img:not(img:last-child),
@@ -273,7 +275,7 @@ div.callout img.cover {
     font-size: 20px;
   }
 
-  p.large-text {
+  .large-text {
     line-height: 25px;
   }
 

@@ -7,6 +7,7 @@ interface Props {
   imgSrc: string;
   altText: string;
   description: string;
+  additionalDescription?: string;
   showTools?: boolean;
   toolImgSrcs?: string[];
   toolNames?: string[];
@@ -22,6 +23,7 @@ export const CaseIntro = ({
   imgSrc,
   altText,
   description,
+  additionalDescription,
   showTools,
   toolImgSrcs,
   toolNames,
@@ -39,7 +41,13 @@ export const CaseIntro = ({
       <div className="callout">
         <img src={imgSrc} alt={altText} title={altText} className="cover" />
       </div>
-      <p className="large-text">{description}</p>
+      <div>
+        <p className="large-text">{description}</p>
+        {additionalDescription && (
+          <p className="large-text secondary">{additionalDescription}</p>
+        )}
+      </div>
+
       {(showTeam || showTools) && (
         <section className="details">
           {showTeam && teamImgSrcs && teamNames && (
