@@ -1,7 +1,9 @@
-.filter-container span {
-  margin-right: 20px;
+.filter-container,
+.filter-container .btn-container {
+  display: flex;
+  align-items: center;
 }
 
-.filter-container .btn-container {
-  display: inline-flex;
+.filter-container {
+  gap: 20px;
 }

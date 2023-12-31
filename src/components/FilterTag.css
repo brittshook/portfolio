@@ -14,3 +14,7 @@ button:hover,
 button.active {
   background-color: #ededed8d;
 }
+
+button.active {
+  border-width: 1.5px;
+}

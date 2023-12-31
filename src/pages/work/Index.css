@@ -1,0 +1,13 @@
+#work h1 {
+  margin-bottom: 15px;
+}
+
+#work .filter-container {
+  margin-bottom: 30px;
+}
+
+#project-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
