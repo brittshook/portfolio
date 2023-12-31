@@ -56,6 +56,7 @@ h1 {
 }
 
 h2.eyebrow {
+  font-weight: 400;
   font-size: 15px;
   font-family: "IBM Plex Mono", "Courier New", Courier, monospace;
   color: var(--text-secondary-light, #949494);
@@ -136,6 +137,10 @@ img {
 
 .italic {
   font-style: italic;
+}
+
+.semi-bold {
+  font-weight: 600;
 }
 
 button,

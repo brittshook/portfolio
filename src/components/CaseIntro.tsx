@@ -32,7 +32,7 @@ export const CaseIntro = ({
   teamImgSrcs,
 }: Props) => {
   return (
-    <>
+    <section id="overview">
       <div className="case-headers">
         <h1>{title}</h1>
         <p>{subtitle}</p>
@@ -55,6 +55,6 @@ export const CaseIntro = ({
           )}
         </section>
       )}
-    </>
+    </section>
   );
 };
