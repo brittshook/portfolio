@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import { Team } from "./Team";
 import { Tools } from "./Tools";
 

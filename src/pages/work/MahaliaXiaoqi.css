@@ -1,0 +1,22 @@
+#mahalia-xiaoqi .case-study-text img:not(div.callout > img) {
+  border-radius: 3px;
+  border: var(--surface-border, #eee) 1px solid;
+}
+
+#mahalia-xiaoqi .speech-bubble:not(.speech-bubble:last-child) {
+  margin-bottom: 30px;
+}
+
+#text-field-component {
+  height: 380px;
+}
+
+#card-before,
+#card-after {
+  height: 320px;
+  margin-bottom: 10px;
+}
+
+div.callout:has(#card-before) {
+  gap: 30px;
+}

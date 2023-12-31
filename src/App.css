@@ -96,6 +96,8 @@ main {
 div.callout {
   background-color: var(--surface-secondary, #ededed);
   align-items: center;
+  padding: 30px;
+  border-radius: 3px;
 }
 
 h1,
@@ -150,7 +152,8 @@ p.large-text {
   font-size: 18px;
 }
 
-.case-study h3 {
+.case-study h3,
+.case-study h4 {
   margin-bottom: 15px;
 }
 
@@ -162,7 +165,8 @@ p {
 p:not(p:last-child),
 ul:not(ul:last-child),
 ol:not(ul:last-child),
-img:not(img:last-child) {
+img:not(img:last-child),
+div.callout:not(div.callout:last-child) {
   margin-bottom: 20px;
 }
 
@@ -222,6 +226,15 @@ hr {
   height: 2px;
   background-color: var(--surface-border, #eee);
   margin-bottom: 18px;
+}
+
+div.callout img {
+  object-fit: contain;
+}
+
+div.callout img.cover {
+  width: 544px;
+  height: 354px;
 }
 
 @media screen and (max-width: 999px) {
