@@ -23,7 +23,7 @@ export const Button = ({
   showText,
   showTooltip,
   goToInternalPage,
-  goToExternalPage
+  goToExternalPage,
 }: Props) => {
   const buttonRef = useRef(null);
 

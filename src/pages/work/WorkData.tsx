@@ -47,7 +47,7 @@ export const WorkData = [
   {
     title: "Leading content design for an enhanced provider experience",
     description: "State Medicaid Agency (@Deloitte Consulting)",
-    imgSrc: "images/test.webp",
+    imgSrc: "/images/state_medicaid_agency/cover.webp",
     altText: "test",
     showCaseStudyButton: true,
     caseStudyPath: "/work/state-medicaid-agency",

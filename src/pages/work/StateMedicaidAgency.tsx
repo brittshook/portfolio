@@ -1,9 +1,15 @@
+import { useEffect } from "react";
 import { CaseIntro } from "../../components/CaseIntro";
 import { NavBar } from "../../components/NavBar";
+import "./StateMedicaidAgency.css";
 
 export const StateMedicaidAgency = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <main id="mahalia">
+    <main id="state-medicaid-agency" className="case-study">
       <NavBar
         type="sub"
         items={[
@@ -19,11 +25,11 @@ export const StateMedicaidAgency = () => {
         <CaseIntro
           title="Leading content design for an enhanced provider experience"
           subtitle="State Medicaid Agency"
-          imgSrc="/images/test.webp"
+          imgSrc="/images/state_medicaid_agency/cover.webp"
           altText="test"
           description="I led a messaging strategy and developed UX content to communicate provider experience changes in an overhaul of a state Medicaid agency's health plans and its digital systems. For confidentiality, I have omited and replaced sensitive information, including the agency's name. Visuals are not finalized deliverables but rather recreations in Figma and other tools. They are not 1:1 representations, and none of the examples include real data."
         />
-        <section className="case-study">
+        <section className="case-study-text">
           <section id="background">
             <h2 className="eyebrow">Background</h2>
             <div>
@@ -64,11 +70,21 @@ export const StateMedicaidAgency = () => {
                 then forward to the appropriate health insurance for that
                 member's Medicaid health plan.
               </p>
-              <p className="semi-bold">
+              <p className="bold">
                 During the transition between systems A and B, there would be a
                 lapse in access to either system while data is migrated.
               </p>
-              <img />
+              <img
+                src="/images/state_medicaid_agency/system_diagram.webp"
+                alt="System A will be decommissioned, and its data will be migrated to System B, resulting in a service disruption lasting for 2 weeks"
+                onClick={() =>
+                  window.open(
+                    "/images/state_medicaid_agency/system_diagram.webp",
+                    "_blank"
+                  )
+                }
+                className="has-click-event"
+              />
             </div>
             <div>
               <h3>
@@ -101,10 +117,10 @@ export const StateMedicaidAgency = () => {
                 and vision for Medicaid members.
               </p>
               <p>
-                <span className="semi-bold">
+                <span className="bold">
                   Part of the challenge of this project was quickly getting up
                   to speed on the technical aspects
-                </span>
+                </span>{" "}
                 in order to message both technical and non-technical users
                 regarding the changes.
               </p>
@@ -120,7 +136,7 @@ export const StateMedicaidAgency = () => {
                 complete tasks. The system migration would cause delays and
                 disrupt workflows.
               </p>
-              <p className="semi-bold">Experience Goals:</p>
+              <p className="bold">Experience Goals:</p>
               <ul>
                 <li>
                   Prioritize user needs over system-related details in our
@@ -140,7 +156,7 @@ export const StateMedicaidAgency = () => {
                   users
                 </li>
               </ul>
-              <p className="semi-bold">Limitations:</p>
+              <p className="bold">Limitations:</p>
               <ul>
                 <li>Use established design components</li>
                 <li>
@@ -158,7 +174,7 @@ export const StateMedicaidAgency = () => {
               <p>Essentially, the messaging can be divided into two phases:</p>
               <ol>
                 <li>
-                  <span className="semi-bold">
+                  <span className="bold">
                     Pre-transition and transition phases
                   </span>
                   <ul>
@@ -170,8 +186,8 @@ export const StateMedicaidAgency = () => {
                   </ul>
                 </li>
                 <li>
+                  <span className="bold">Post-transition phase</span>
                   <ul>
-                    <span className="semi-bold">Post-transition phase</span>
                     <li>Messaging would shift to System B</li>
                     <li>Onboard users to the redesigned user experience</li>
                   </ul>
@@ -199,19 +215,25 @@ export const StateMedicaidAgency = () => {
                   </p>
                   <ul>
                     <li>
-                      <span className="semi-bold">Goals</span>
-                      <li>
-                        Quick, high-level overview to prepare for impacts on
-                        their practice
-                      </li>
+                      <span className="bold">Goals</span>
+                      <ul>
+                        <li>
+                          Quick, high-level overview to prepare for impacts on
+                          their practice
+                        </li>
+                      </ul>
                     </li>
                     <li>
-                      <span className="semi-bold">Pain Points</span>
-                      <li>Non-technical, varying levels of tech-savviness</li>
+                      <span className="bold">Pain Points</span>
+                      <ul>
+                        <li>Non-technical, varying levels of tech-savviness</li>
+                      </ul>
                     </li>
                     <li>
-                      <span className="semi-bold">System Use</span>
-                      <li>Periodically to check-in</li>
+                      <span className="bold">System Use</span>
+                      <ul>
+                        <li>Periodically to check-in</li>
+                      </ul>
                     </li>
                   </ul>
                 </div>
@@ -223,21 +245,28 @@ export const StateMedicaidAgency = () => {
                   </p>
                   <ul>
                     <li>
-                      <span className="semi-bold">Goals</span>
-                      <li>
-                        Comprehensive understanding of impacts on their workflow
-                      </li>
+                      <span className="bold">Goals</span>
+                      <ul>
+                        <li>
+                          Comprehensive understanding of impacts on their
+                          workflow
+                        </li>
+                      </ul>
                     </li>
                     <li>
-                      <span className="semi-bold">Pain Points</span>
-                      <li>
-                        Juggling many tasks & bear the brunt if anything goes
-                        wrong
-                      </li>
+                      <span className="bold">Pain Points</span>
+                      <ul>
+                        <li>
+                          Juggling many tasks & bear the brunt if anything goes
+                          wrong
+                        </li>
+                      </ul>
                     </li>
                     <li>
-                      <span className="semi-bold">System Use</span>
-                      <li>Regularly, it's part of their job</li>
+                      <span className="bold">System Use</span>
+                      <ul>
+                        <li>Regularly, it's part of their job</li>
+                      </ul>
                     </li>
                   </ul>
                 </div>
@@ -257,7 +286,17 @@ export const StateMedicaidAgency = () => {
                 developed a content roadmap to ensure consistency across
                 platforms.
               </p>
-              <img />
+              <img
+                src="/images/state_medicaid_agency/content_roadmap_example.webp"
+                alt="Content roadmap displaying tasks categorized under key objectives, along with information for channel, status, and schedule"
+                onClick={() =>
+                  window.open(
+                    "/images/state_medicaid_agency/content_roadmap_example.webp",
+                    "_blank"
+                  )
+                }
+                className="has-click-event"
+              />
             </div>
             <div>
               <h3>Deliverables</h3>
@@ -277,28 +316,84 @@ export const StateMedicaidAgency = () => {
                 dialogs.
               </p>
               <hr />
-              <div>
-                <h4>
-                  Scenario 1: Migration not yet started / impacts on the horizon
-                </h4>
-                <img />
-                <img />
-              </div>
-              <hr />
-              <div>
-                <h4>Scenario 2: Migration in-progress with ongoing impacts</h4>
-                <img />
-                <img />
-              </div>
-              <hr />
-              <div>
-                <h4>Scenario 3: Migration complete at go-live</h4>
-                <p>
-                  Once the data was migrated and the transition complete, System
-                  A would sunset. The users that did need to maintain access
-                  would log in to the legacy portal through the new System B.
-                </p>
-                <img />
+              <div id="deliverable-examples">
+                <div>
+                  <h4>
+                    Scenario 1: Migration not yet started / impacts on the
+                    horizon
+                  </h4>
+                  <img
+                    src="/images/state_medicaid_agency/before_public.webp"
+                    alt="Banner UI for System A's public portal notifying users to prepare for system impacts and transition to System B"
+                    onClick={() =>
+                      window.open(
+                        "/images/state_medicaid_agency/before_public.webp",
+                        "_blank"
+                      )
+                    }
+                    className="has-click-event"
+                  />
+                  <img
+                    src="/images/state_medicaid_agency/before_internal.webp"
+                    alt="Modal UI for System A's internal portal notifying users to update their provider details ahead of transition"
+                    onClick={() =>
+                      window.open(
+                        "/images/state_medicaid_agency/before_internal.webp",
+                        "_blank"
+                      )
+                    }
+                    className="has-click-event"
+                  />
+                </div>
+                <hr />
+                <div>
+                  <h4>
+                    Scenario 2: Migration in-progress with ongoing impacts
+                  </h4>
+                  <img
+                    src="/images/state_medicaid_agency/during_public.webp"
+                    alt="Banner UI for System A's public portal notifying users of ongoing system impacts during transition to System B"
+                    onClick={() =>
+                      window.open(
+                        "/images/state_medicaid_agency/during_public.webp",
+                        "_blank"
+                      )
+                    }
+                    className="has-click-event"
+                  />
+                  <img
+                    src="/images/state_medicaid_agency/during_internal.webp"
+                    alt="Modal UI for System A's internal portal notifying users to enroll in the state's Single Sign-On (SSO)"
+                    onClick={() =>
+                      window.open(
+                        "/images/state_medicaid_agency/during_internal.webp",
+                        "_blank"
+                      )
+                    }
+                    className="has-click-event"
+                  />
+                </div>
+                <hr />
+                <div>
+                  <h4>Scenario 3: Migration complete at go-live</h4>
+                  <p>
+                    Once the data was migrated and the transition complete,
+                    System A would sunset. The users that did need to maintain
+                    access would log in to the legacy portal through the new
+                    System B.
+                  </p>
+                  <img
+                    src="/images/state_medicaid_agency/go_live_public.webp"
+                    alt="Banner UI for System A's public portal notifying users that the system will depreciate soon"
+                    onClick={() =>
+                      window.open(
+                        "/images/state_medicaid_agency/go_live_public.webp",
+                        "_blank"
+                      )
+                    }
+                    className="has-click-event"
+                  />
+                </div>
               </div>
             </div>
           </section>
@@ -321,9 +416,7 @@ export const StateMedicaidAgency = () => {
                 administrators, billers, and helpdesk professionals may also
                 utilize these resources.
               </p>
-              <p className="semi-bold">
-                Our goals for these materials were to:
-              </p>
+              <p className="bold">Our goals for these materials were to:</p>
               <ul>
                 <li>
                   Communicate a high-level overview of the steps required to
@@ -357,9 +450,39 @@ export const StateMedicaidAgency = () => {
                 contained journey maps outlining common tasks, similar to the
                 examples below:
               </p>
-              <img />
-              <img />
-              <img />
+              <img
+                src="/images/state_medicaid_agency/pre_registered_user.webp"
+                alt="Illustrated steps for logging into System B using Single Sign-On (SSO) if you pre-enrolled"
+                onClick={() =>
+                  window.open(
+                    "/images/state_medicaid_agency/pre_registered_user.webp",
+                    "_blank"
+                  )
+                }
+                className="has-click-event"
+              />
+              <img
+                src="/images/state_medicaid_agency/existing_user.webp"
+                alt="Illustrated steps for logging into System B using Single Sign-On (SSO) if you are an existing Medicaid provider, but did not pre-enroll"
+                onClick={() =>
+                  window.open(
+                    "/images/state_medicaid_agency/existing_user.webp",
+                    "_blank"
+                  )
+                }
+                className="has-click-event"
+              />{" "}
+              <img
+                src="/images/state_medicaid_agency/new_user.webp"
+                alt="Illustrated steps for logging into System B using Single Sign-On (SSO) if you are a new Medicaid provider and did not pre-enroll"
+                onClick={() =>
+                  window.open(
+                    "/images/state_medicaid_agency/new_user.webp",
+                    "_blank"
+                  )
+                }
+                className="has-click-event"
+              />
             </div>
           </section>
           <section id="results">

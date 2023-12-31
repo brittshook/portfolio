@@ -40,7 +40,7 @@ export const CaseIntro = ({
       <div className="callout">
         <img src={imgSrc} alt={altText} title={altText} />
       </div>
-      <p>{description}</p>
+      <p className="large-text">{description}</p>
       {(showTeam || showTools) && (
         <section className="details">
           {showTeam && teamImgSrcs && teamNames && (

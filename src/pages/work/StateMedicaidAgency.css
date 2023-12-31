@@ -1,0 +1,92 @@
+#state-medicaid-agency div.callout:has(.persona),
+#state-medicaid-agency .persona {
+  display: flex;
+}
+
+#state-medicaid-agency .persona {
+  width: 324px;
+  background-color: #5c89fa;
+  color: var(--surface-primary, #fff);
+  padding: 30px 18px;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 2px;
+  box-shadow: #00000021 0.4px 0.4px 0.56px -0.63px,
+    #00000020 1.21px 1.21px 1.71px -1.25px,
+    #00000020 3.19px 3.19px 4.51px -1.88px, #00000020 10px 10px 14.14px -2.5px;
+}
+
+#state-medicaid-agency div.callout:has(.persona) {
+  padding: 15px;
+  gap: 14px;
+  min-height: 441px;
+  height: fit-content;
+}
+
+#state-medicaid-agency .persona p,
+#state-medicaid-agency .persona ul {
+  font-size: 15px;
+}
+
+#state-medicaid-agency .persona ul {
+  list-style: none;
+}
+
+#state-medicaid-agency .persona li > ul {
+  margin-top: 6px;
+}
+
+#state-medicaid-agency .persona > ul > li:not(li:last-child) {
+  margin-bottom: 20px;
+}
+
+#state-medicaid-agency .persona > ul > li:first-of-type {
+  background-image: url("/icons/check_circle.svg");
+}
+
+#state-medicaid-agency .persona > ul > li:nth-of-type(2) {
+  background-image: url("/icons/close_circle.svg");
+}
+#state-medicaid-agency .persona > ul > li:nth-of-type(3) {
+  background-image: url("/icons/clock_circle.svg");
+}
+
+#state-medicaid-agency .persona > ul > li {
+  background-repeat: no-repeat;
+  padding-left: 36px;
+  padding-top: 3px;
+}
+
+#state-medicaid-agency h4:not(.persona h4) {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+#state-medicaid-agency #deliverable-examples > div {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 999px) and (min-width: 750px) {
+  #state-medicaid-agency div.callout:has(.persona) {
+    height: 460px;
+  }
+
+  #state-medicaid-agency .persona {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  #state-medicaid-agency div.callout:has(.persona) {
+    flex-direction: column;
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 449px) {
+  #state-medicaid-agency div.callout:has(.persona) {
+    background-color: var(--surface-primary, #fff);
+    padding: 0;
+  }
+}

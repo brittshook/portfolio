@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { CaseIntro } from "../../components/CaseIntro";
 import { NavBar } from "../../components/NavBar";
 
 export const MahaliaXiaoqi = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main id="mahalia">
       <NavBar
