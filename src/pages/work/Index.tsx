@@ -6,6 +6,10 @@ import { useState, useEffect } from "react";
 import "./Index.css";
 
 export const Work = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [displayCards, setDisplayCards] = useState<React.ReactNode[]>([]);
 
   const handleSelectCategory = (category: string | null) => {

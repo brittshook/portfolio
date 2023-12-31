@@ -1,3 +1,7 @@
+.filter-container {
+  min-height: 33.5px;
+}
+
 .filter-container,
 .filter-container .btn-container {
   display: flex;
