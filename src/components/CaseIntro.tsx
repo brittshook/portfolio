@@ -38,7 +38,7 @@ export const CaseIntro = ({
         <p>{subtitle}</p>
       </div>
       <div className="callout">
-        <img src={imgSrc} alt={altText} title={altText} />
+        <img src={imgSrc} alt={altText} title={altText} className="cover" />
       </div>
       <p className="large-text">{description}</p>
       {(showTeam || showTools) && (

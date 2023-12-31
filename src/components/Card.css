@@ -3,36 +3,31 @@
   color: var(--text-primary, #101010);
 }
 
-.callout {
+.card .callout {
   height: 430px;
   margin-bottom: 16px;
 }
 
-.callout img {
-  width: 544px;
-  height: 354px;
-}
-
-#info {
+.card #info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#details {
+.card #details {
   width: 60%;
 }
 
-.title {
-  margin-bottom: 10px;
+.card .title {
+  margin-bottom: 8px;
 }
 
 @media screen and (max-width: 449px) {
-  .callout {
+  .card .callout {
     height: 330px;
   }
 }
 
-p.description {
+.card p.description {
   color: var(--text-secondary-light, #949494);
 }

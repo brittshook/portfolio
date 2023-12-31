@@ -14,6 +14,7 @@ interface Props {
   imageSrc: string;
   altText: string;
   categories?: string[];
+  showOnHomepage?: boolean;
 }
 
 export const Card = ({
@@ -39,13 +40,13 @@ export const Card = ({
   };
 
   return (
-    <div>
+    <div className="card">
       <div className="callout">
         <img
           src={imageSrc}
           alt={altText}
           onClick={handleClick}
-          className="has-click-event"
+          className="has-click-event cover"
         ></img>
       </div>
       <div id="info">

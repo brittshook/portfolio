@@ -9,18 +9,20 @@ export const WorkData = [
     showGithubButton: true,
     githubRepoLink: "test",
     categories: ["software engineering"],
+    showOnHomepage: true,
   },
   {
     title:
       "Driving conversions in a bite-size tattoo portfolio with booking form",
     description: "HTML, CSS, JavaScript",
-    imgSrc: "images/test.webp",
+    imgSrc: "/images/mahalia-xiaoqi/cover.webp",
     altText: "test",
     showCaseStudyButton: true,
     caseStudyPath: "/work/mahalia-xiaoqi",
     showGithubButton: true,
     githubRepoLink: "https://github.com/brittshook/mahalia",
     categories: ["software engineering", "UX design"],
+    showOnHomepage: true,
   },
   {
     title: "Introducing Pride Pac: Queer-themed take on Pac-Man",
@@ -32,6 +34,7 @@ export const WorkData = [
     showGithubButton: true,
     githubRepoLink: "https://github.com/brittshook/pride-pac",
     categories: ["software engineering"],
+    showOnHomepage: true,
   },
   {
     title: "TBD",
@@ -43,6 +46,7 @@ export const WorkData = [
     showGithubButton: true,
     githubRepoLink: "https://github.com/georgeperryv/FinalStravaProject",
     categories: ["software engineering", "UX design"],
+    showOnHomepage: false,
   },
   {
     title: "Leading content design for an enhanced provider experience",
@@ -52,5 +56,6 @@ export const WorkData = [
     showCaseStudyButton: true,
     caseStudyPath: "/work/state-medicaid-agency",
     categories: ["UX design"],
+    showOnHomepage: false,
   },
 ];
