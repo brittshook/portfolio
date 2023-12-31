@@ -4,7 +4,7 @@ import { useState } from "react";
 
 interface Props {
   filterCategories: string[];
-  onSelectCategory: (category: string) => void;
+  onSelectCategory: (category: string | null) => void;
 }
 
 export const Filter = ({ filterCategories, onSelectCategory }: Props) => {
@@ -19,10 +19,13 @@ export const Filter = ({ filterCategories, onSelectCategory }: Props) => {
             key={index}
             active={selectedIndex == index}
             onClick={() => {
-              selectedIndex != index
-                ? setSelectedIndex(index)
-                : setSelectedIndex(-1);
-              onSelectCategory(category);
+              if (selectedIndex === index) {
+                setSelectedIndex(-1);
+                onSelectCategory(null);
+              } else {
+                setSelectedIndex(index);
+                onSelectCategory(category);
+              }
             }}
           >
             {category}
