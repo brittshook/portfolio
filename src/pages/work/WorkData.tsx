@@ -39,7 +39,7 @@ export const WorkData = [
   {
     title: "Designing a cohesive experience across platforms with StravaFit",
     description: "React, TypeScript",
-    imgSrc: "images/test.webp",
+    imgSrc: "images/stravafit/cover.webp",
     altText: "test",
     showCaseStudyButton: true,
     caseStudyPath: "/work/stravafit",

@@ -19,7 +19,7 @@
 }
 
 .card .title {
-  margin-bottom: 8px;
+  margin-bottom: 6px !important;
 }
 
 @media screen and (max-width: 449px) {

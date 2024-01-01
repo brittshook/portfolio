@@ -1,5 +1,5 @@
 type Props = {};
 
-export const Insight = (props: Props) => {
-  return <div>Insight</div>;
+export const Menu = (props: Props) => {
+  return <div>Menu</div>;
 };
