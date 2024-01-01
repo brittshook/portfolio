@@ -18,3 +18,12 @@
 #stravafit #features img {
   margin-bottom: 10px;
 }
+
+#stravafit .mobile {
+  width: 250px;
+  height: 530px;
+}
+
+#stravafit div.callout:has(.mobile) {
+  gap: 30px;
+}

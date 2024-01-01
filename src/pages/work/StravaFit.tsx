@@ -5,6 +5,7 @@ import { Definition } from "../../components/Definition";
 import { EnlargeImage } from "../../components/EnlargeImage";
 import "./StravaFit.css";
 import { Insight } from "../../components/Insight";
+import { Video } from "../../components/Video";
 
 export const StravaFit = () => {
   useEffect(() => {
@@ -17,9 +18,9 @@ export const StravaFit = () => {
         type="sub"
         items={[
           ["Overview", "#overview"],
+          ["Background", "#background"],
           ["Research", "#research"],
-          ["Designing for iOS", "#design-ios"],
-          ["Designing for Web", "#design-web"],
+          ["Design", "#design"],
           ["Test", "#test"],
           ["Development", "#development"],
           ["Takeaways", "#takeaways"],
@@ -103,7 +104,10 @@ export const StravaFit = () => {
                 </a>{" "}
                 of these companies from the previous round of research.
               </p>
-              <EnlargeImage src="" altText="" />
+              <EnlargeImage
+                src="/images/stravafit/comp_audit.webp"
+                altText=""
+              />
             </div>
             <div>
               <h3>
@@ -157,8 +161,8 @@ export const StravaFit = () => {
               </div>
             </div>
           </section>
-          <section id="define">
-            <h2 className="eyebrow">Define</h2>
+          <section id="design">
+            <h2 className="eyebrow">Design</h2>
             <div>
               <h3>
                 Aligning goals using a Product Requirements Document (PRD)
@@ -189,7 +193,7 @@ export const StravaFit = () => {
                 users to complete a card building worksheet to build their ideal
                 design.
               </p>
-              <EnlargeImage src="" altText="" />
+              <EnlargeImage src="/images/stravafit/co_design.webp" altText="" />
             </div>
             <div>
               <h3>
@@ -207,14 +211,18 @@ export const StravaFit = () => {
                 perspective.
               </p>
               <div className="callout">
-                <img src="" alt="" />
+                <img src="/images/stravafit/sort_and_filter.webp" alt="" />
               </div>
             </div>
             <div>
               <h3>Designing the nuances of a content library</h3>
               <p>This project was full of UX considerations like–</p>
               <div className="callout">
-                <img src="/images/stravafit/load_more.webp" alt="" />{" "}
+                <img
+                  className="mobile"
+                  src="/images/stravafit/load_more.webp"
+                  alt=""
+                />{" "}
                 {/* Fix Image*/}
                 <div className="annotate">
                   <h4>Load more</h4>
@@ -226,7 +234,11 @@ export const StravaFit = () => {
                 </div>
               </div>
               <div className="callout">
-                <img src="/images/stravafit/multi_sort.webp" alt="" />
+                <img
+                  className="mobile"
+                  src="/images/stravafit/multi_sort.webp"
+                  alt=""
+                />
                 <div className="annotate">
                   <h4>Allow multi-sort</h4>
                   <p>
@@ -236,7 +248,15 @@ export const StravaFit = () => {
                 </div>
               </div>
               <div className="callout">
-                <img src="" alt="" />
+                <Video
+                  src="/videos/stravafit/load_top.mp4"
+                  type="video/mp4"
+                  autoPlay={true}
+                  muted={true}
+                  loop={true}
+                  setDelay={1000}
+                  className="mobile"
+                />
                 <div className="annotate">
                   <h4>Load content at top</h4>
                   <p>
@@ -253,7 +273,11 @@ export const StravaFit = () => {
                 library and no valid results returned.
               </p>
               <div className="callout">
-                <img src="/images/stravafit/empty_library.webp" alt="" />
+                <img
+                  className="mobile"
+                  src="/images/stravafit/empty_library.webp"
+                  alt=""
+                />
                 <div className="annotate">
                   <h4>Empty library</h4>
                   <p>
@@ -265,7 +289,11 @@ export const StravaFit = () => {
                 </div>
               </div>
               <div className="callout">
-                <img src="/images/stravafit/no_valid_results.webp" alt="" />
+                <img
+                  className="mobile"
+                  src="/images/stravafit/no_valid_results.webp"
+                  alt=""
+                />
                 <div className="annotate">
                   <h4>No valid results</h4>
                   <p>
