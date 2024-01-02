@@ -5,12 +5,12 @@ type Props = {
   children: ReactNode;
   color: string;
   orientation: "left" | "right";
-}
+};
 
 export const SpeechBubble = ({ children, color, orientation }: Props) => {
   return (
     <div
-      className={orientation + " speech-bubble"}
+      className={`speech-bubble ${orientation}`}
       style={{ backgroundColor: color }}
     >
       "{children}"

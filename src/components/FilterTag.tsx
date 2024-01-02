@@ -9,7 +9,7 @@ type Props = {
 export const FilterTag = ({ children, active, onClick }: Props) => {
   return (
     <button
-      className={active ? "filter active" : "filter"}
+      className={`filter ${active && "active"}`}
       type="button"
       onClick={onClick}
     >
