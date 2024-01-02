@@ -168,6 +168,7 @@ p:not(p:last-child):not(p.tooltip),
 ul:not(ul:last-child),
 ol:not(ul:last-child),
 img:not(img:last-child),
+video:not(video:last-child),
 div.callout:not(div.callout:last-child) {
   margin-bottom: 20px;
 }

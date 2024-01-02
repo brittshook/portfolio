@@ -12,7 +12,7 @@ export const StateMedicaidAgency = () => {
   return (
     <main id="state-medicaid-agency" className="case-study">
       <NavBar
-        type="sub"
+        isCaseStudy={true}
         items={[
           ["Overview", "#overview"],
           ["Background", "#background"],

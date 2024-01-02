@@ -31,7 +31,7 @@ export const Home = () => {
 
   return (
     <main id="home">
-      <NavBar type="main" />
+      <NavBar />
       <div className="page-content">
         <section className="intro">
           <h1>Britt Shook</h1>

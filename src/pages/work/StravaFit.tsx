@@ -15,7 +15,7 @@ export const StravaFit = () => {
   return (
     <main id="stravafit" className="case-study">
       <NavBar
-        type="sub"
+        isCaseStudy={true}
         items={[
           ["Overview", "#overview"],
           ["Background", "#background"],
@@ -23,7 +23,6 @@ export const StravaFit = () => {
           ["Design", "#design"],
           ["Test", "#test"],
           ["Development", "#development"],
-          ["Takeaways", "#takeaways"],
         ]}
       />
       <div className="page-content">
@@ -33,20 +32,20 @@ export const StravaFit = () => {
           imgSrc="/images/stravafit/cover.webp"
           altText=""
           description="I paired with another full-stack engineer to develop a guided workout feature for the Strava web platform."
-          additionalDescription="This is a student project completed as a part of Designlab's UX Academy. Please note that this is a concept feature & app created for Strava as a personal project."
+          additionalDescription="This is a student project completed as a part of Designlab's UX Academy. Please note that this is a concept feature created for Strava as a personal project."
           showTeam={true}
           teamImgSrcs={[
-            "/images/stravafit/britt.webp",
-            "/images/stravafit/george.webp",
+            "/icons/profile_pic/britt.webp",
+            "/icons/profile_pic/george.webp",
           ]}
           teamNames={["Britt", "George"]}
           teamRoles={["Designer & Front-End Developer", "Front-End Developer"]}
           showTools={true}
           toolNames={["Figma", "React", "TypeScript"]}
           toolImgSrcs={[
-            "/icons/figma.svg",
-            "/icons/react.svg",
-            "/icons/typescript.svg",
+            "/icons/tool/figma.webp",
+            "/icons/tool/react.webp",
+            "/icons/tool/typescript.webp",
           ]}
         />
         <section className="case-study-text">
@@ -309,7 +308,10 @@ export const StravaFit = () => {
           <section id="test">
             <h2 className="eyebrow">Test</h2>
             <div>
-              <h3></h3>
+              <h3>
+                Conducting unmoderated tests to save time and gather data-rich
+                insights
+              </h3>
               <p>
                 Before this project, I designed a native app version of this
                 feature wherein I conducted moderated tests. As a result, I felt
@@ -349,23 +351,29 @@ export const StravaFit = () => {
                 To address this, I rearranged the order of filters and placed
                 instructors at the bottom. Additionally, to avoid any potential
                 scrolling issues for touch screen users, I made UI changes and
-                utilized the system settings dropdown for touch screen devices
+                utilized the system default dropdown for touch screen devices
                 instead of the custom UI.
               </p>
               <div className="callout">
                 <div>
-                  <img
-                    id="filter-before"
-                    src="/images/stravafit/filter_before.webp"
-                    alt=""
+                  <Video
+                    src="/videos/stravafit/filter_before.mp4"
+                    type="video/mp4"
+                    autoPlay={true}
+                    muted={true}
+                    loop={true}
+                    className="mobile"
                   />
                   <figcaption>Before</figcaption>
                 </div>
                 <div>
-                  <img
-                    id="filter-after"
-                    src="/images/stravafit/filter_after.webp"
-                    alt=""
+                  <Video
+                    src="/videos/stravafit/filter_after.mp4"
+                    type="video/mp4"
+                    autoPlay={true}
+                    muted={true}
+                    loop={true}
+                    className="mobile"
                   />
                   <figcaption>After</figcaption>
                 </div>

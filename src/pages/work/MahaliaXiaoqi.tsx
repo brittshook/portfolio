@@ -13,7 +13,7 @@ export const MahaliaXiaoqi = () => {
   return (
     <main id="mahalia-xiaoqi" className="case-study">
       <NavBar
-        type="sub"
+        isCaseStudy={true}
         items={[
           ["Overview", "#overview"],
           ["Background", "#background"],
@@ -28,12 +28,16 @@ export const MahaliaXiaoqi = () => {
         <CaseIntro
           title="Driving conversions in a bite-size tattoo portfolio"
           subtitle="Mahalia Xiaoqi"
-          imgSrc="/images/mahalia-xiaoqi/cover.webp"
+          imgSrc="/images/mahalia_xiaoqi/cover.webp"
           altText="Mahalia Xiaoqi's tattoo portfolio homepage displayed on desktop and mobile devices"
           description="I led the end-to-end design and development of a bite-sized tattoo portfolio, including content & product design, to draw clientele for a budding artist."
           showTools={true}
           toolNames={["HTML", "CSS", "JavaScript"]}
-          toolImgSrcs={["tbd", "tbd", "tbd"]}
+          toolImgSrcs={[
+            "/icons/tool/html5.webp",
+            "/icons/tool/css3.webp",
+            "/icons/tool/javascript.webp",
+          ]}
         />
         <section className="case-study-text">
           <section id="background">
@@ -88,7 +92,7 @@ export const MahaliaXiaoqi = () => {
                 on Notion.
               </p>
               <EnlargeImage
-                src="/images/mahalia-xiaoqi/affinity_map.webp"
+                src="/images/mahalia_xiaoqi/affinity_map.webp"
                 altText="Affinity map summarizing grouped user insights and themes from 7 user interviews"
               />
             </div>
@@ -169,7 +173,7 @@ export const MahaliaXiaoqi = () => {
                 idea.
               </p>
               <EnlargeImage
-                src="/images/mahalia-xiaoqi/info_architecture.webp"
+                src="/images/mahalia_xiaoqi/info_architecture.webp"
                 altText="Information architecture diagram for the homepage and form modal's content"
               />
             </div>
@@ -181,7 +185,7 @@ export const MahaliaXiaoqi = () => {
                 content, like the selected work or FAQ section.
               </p>
               <EnlargeImage
-                src="/images/mahalia-xiaoqi/crazy8s.webp"
+                src="/images/mahalia_xiaoqi/crazy8s.webp"
                 altText="Crazy 8s sketch sheets featuring eight quick design concepts for Selected Work and FAQ page elements"
               />
             </div>
@@ -203,19 +207,19 @@ export const MahaliaXiaoqi = () => {
                 specific style or skill set.
               </p>
               <EnlargeImage
-                src="/images/mahalia-xiaoqi/modal_sketches.webp"
+                src="/images/mahalia_xiaoqi/modal_sketches.webp"
                 altText="Wireframe sketches of three form page modals"
               />
               <EnlargeImage
-                src="/images/mahalia-xiaoqi/form_start.webp"
+                src="/images/mahalia_xiaoqi/form_start.webp"
                 altText="Getting started form page, shown on desktop and mobile devices"
               />
               <EnlargeImage
-                src="/images/mahalia-xiaoqi/form_page_1.webp"
+                src="/images/mahalia_xiaoqi/form_page_1.webp"
                 altText="Form page for customer contact information, shown on desktop and mobile devices"
               />
               <EnlargeImage
-                src="/images/mahalia-xiaoqi/form_page_2.webp"
+                src="/images/mahalia_xiaoqi/form_page_2.webp"
                 altText="Form page for basic tattoo details, shown on desktop and mobile devices"
               />
             </div>
@@ -235,7 +239,7 @@ export const MahaliaXiaoqi = () => {
               <div className="callout">
                 <img
                   id="text-field-component"
-                  src="/images/mahalia-xiaoqi/text_field_UI.webp"
+                  src="/images/mahalia_xiaoqi/text_field_UI.webp"
                   alt="Component states (default, selected, success, error, error selected, disabled) for a single-line text field"
                 />
               </div>
@@ -254,7 +258,7 @@ export const MahaliaXiaoqi = () => {
                 structure: Please [noun] your [field name / 'option'].
               </p>
               <EnlargeImage
-                src="/images/mahalia-xiaoqi/error_messages.webp"
+                src="/images/mahalia_xiaoqi/error_messages.webp"
                 altText="Error message planning document in Google Sheets"
               />
             </div>
@@ -315,7 +319,7 @@ export const MahaliaXiaoqi = () => {
                 <div>
                   <img
                     id="card-before"
-                    src="/images/mahalia-xiaoqi/card_before.webp"
+                    src="/images/mahalia_xiaoqi/card_before.webp"
                     alt=""
                   />
                   <figcaption>Before</figcaption>
@@ -323,7 +327,7 @@ export const MahaliaXiaoqi = () => {
                 <div>
                   <img
                     id="card-after"
-                    src="/images/mahalia-xiaoqi/card_after.webp"
+                    src="/images/mahalia_xiaoqi/card_after.webp"
                     alt=""
                   />
                   <figcaption>After</figcaption>

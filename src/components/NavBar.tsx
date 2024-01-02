@@ -4,11 +4,11 @@ import "./NavBar.css";
 import { Link, useLocation } from "react-router-dom";
 
 type Props = {
-  type: "main" | "sub";
+  isCaseStudy?: boolean;
   items?: [string, string][];
 };
 
-export const NavBar = ({ type, items }: Props) => {
+export const NavBar = ({ isCaseStudy, items }: Props) => {
   const navItems = items || [
     ["Home", "/"],
     ["About", "/about"],
@@ -19,13 +19,13 @@ export const NavBar = ({ type, items }: Props) => {
   const [active, setActive] = useState<string | null>(null);
   const location = useLocation();
   useEffect(() => {
-    if (type === "main") {
+    if (!isCaseStudy) {
       navItems.forEach(([_, path]) => {
         if (location.pathname === path) {
           setActive(path);
         }
       });
-    } else if (type === "sub") {
+    } else {
       const observer = new IntersectionObserver(
         (entries) => {
           const vh = window.innerHeight;
@@ -76,11 +76,11 @@ export const NavBar = ({ type, items }: Props) => {
         observer.disconnect();
       };
     }
-  }, [type, navItems, location.pathname]);
+  }, [isCaseStudy, navItems, location.pathname]);
 
   return (
     <nav>
-      {type === "sub" && (
+      {isCaseStudy && (
         <Button
           type="button"
           imgSrc="/icons/arrow_left.svg"

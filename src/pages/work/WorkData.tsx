@@ -15,7 +15,7 @@ export const WorkData = [
     title:
       "Driving conversions in a bite-size tattoo portfolio with booking form",
     description: "HTML, CSS, JavaScript",
-    imgSrc: "/images/mahalia-xiaoqi/cover.webp",
+    imgSrc: "/images/mahalia_xiaoqi/cover.webp",
     altText: "test",
     showCaseStudyButton: true,
     caseStudyPath: "/work/mahalia-xiaoqi",

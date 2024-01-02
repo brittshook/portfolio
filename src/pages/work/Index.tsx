@@ -51,7 +51,7 @@ export const Work = () => {
 
   return (
     <main id="work">
-      <NavBar type="main" />
+      <NavBar />
       <div className="page-content">
         <h1>Recent Projects</h1>
         <Filter

@@ -9,7 +9,7 @@ export const About = () => {
 
   return (
     <main id="about">
-      <NavBar type="main" />
+      <NavBar />
       <div className="page-content">
         <div className="intro">
           <div className="img-container">
