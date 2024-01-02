@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 import { Button } from "./Button";
 import "./NavBar.css";
 import { Link, useLocation } from "react-router-dom";
@@ -6,9 +6,10 @@ import { Link, useLocation } from "react-router-dom";
 type Props = {
   isCaseStudy?: boolean;
   items?: [string, string][];
+  subNav?: [string, ReactNode][];
 };
 
-export const NavBar = ({ isCaseStudy, items }: Props) => {
+export const NavBar = ({ isCaseStudy, items, subNav }: Props) => {
   const navItems = items || [
     ["Home", "/"],
     ["About", "/about"],
@@ -16,13 +17,13 @@ export const NavBar = ({ isCaseStudy, items }: Props) => {
     ["Resume", "/resume"],
     ["Contact", "/contact"],
   ];
-  const [active, setActive] = useState<string | null>(null);
+  const [activeItem, setActiveItem] = useState<string | null>(null);
   const location = useLocation();
   useEffect(() => {
     if (!isCaseStudy) {
-      navItems.forEach(([_, path]) => {
+      navItems.forEach(([, path]) => {
         if (location.pathname === path) {
-          setActive(path);
+          setActiveItem(path);
         }
       });
     } else {
@@ -56,7 +57,7 @@ export const NavBar = ({ isCaseStudy, items }: Props) => {
             }
           });
 
-          maxCrossedId && setActive("#" + maxCrossedId);
+          maxCrossedId && setActiveItem("#" + maxCrossedId);
         },
         {
           root: null,
@@ -65,7 +66,7 @@ export const NavBar = ({ isCaseStudy, items }: Props) => {
         }
       );
 
-      navItems.forEach(([_, path]) => {
+      navItems.forEach(([, path]) => {
         const target = document.querySelector(path);
         if (target) {
           observer.observe(target);
@@ -86,12 +87,15 @@ export const NavBar = ({ isCaseStudy, items }: Props) => {
           imgSrc="/icons/arrow_left.svg"
           altText="go back home"
           goToInternalPage="/"
-        />
+          showTooltip
+        >
+          Go Home
+        </Button>
       )}
       <ul>
         {navItems.map(([item, path]) => (
           <li
-            className={`nav-link ${active === path && "active"}`}
+            className={`${activeItem === path ? "active " : ""}nav-link`}
             key={item}
           >
             {path.startsWith("/") ? (
@@ -99,6 +103,11 @@ export const NavBar = ({ isCaseStudy, items }: Props) => {
             ) : (
               <a href={path}>{item}</a>
             )}
+            {activeItem === path &&
+              subNav &&
+              subNav
+                .filter(([subNavItem]) => subNavItem === item)
+                .map(([, subNavNode]) => subNavNode)}
           </li>
         ))}
       </ul>

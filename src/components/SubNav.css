@@ -1,0 +1,20 @@
+.sub-nav {
+  margin-top: 6px;
+  padding-right: 10px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  list-style: none;
+}
+
+.sub-nav a {
+  font-size: 14px;
+}
+
+.sub-nav .nav-link a:not(.nav-link.active a) {
+  color: var(--text-secondary-light, #949494);
+}
+
+.sub-nav .nav-link.active {
+  color: var(--text-primary, #101010);
+  font-weight: 500;
+}

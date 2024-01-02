@@ -17,20 +17,23 @@ nav > ul {
 }
 
 .nav-link a {
-  font-size: 16px;
-  line-height: 22px;
   color: var(--text-secondary-light, #949494);
+  line-height: 22px;
   text-transform: capitalize;
+}
+
+.nav-link a:not(.sub-nav a) {
+  font-size: 16px;
+}
+
+.nav-link.active a:not(.sub-nav a:not(.sub-nav .active a)) {
+  color: var(--text-primary, #101010);
+  font-weight: 600;
 }
 
 .nav-link a:hover {
   color: var(--text-secondary-dark, #303030);
   text-decoration: none;
-}
-
-.nav-link.active a {
-  font-weight: 600;
-  color: var(--text-primary, #101010);
 }
 
 nav button {
