@@ -3,6 +3,7 @@ import { CaseIntro } from "../../components/CaseIntro";
 import { NavBar } from "../../components/NavBar";
 import "./StateMedicaidAgency.css";
 import { EnlargeImage } from "../../components/EnlargeImage";
+import { SubNav } from "../../components/SubNav";
 
 export const StateMedicaidAgency = () => {
   useEffect(() => {
@@ -20,6 +21,30 @@ export const StateMedicaidAgency = () => {
           ["Pre-Transition", "#pre-transition"],
           ["Post-Transition", "#post-transition"],
           ["Results", "#results"],
+        ]}
+        subNav={[
+          [
+            "Pre-Transition",
+            <SubNav
+              items={[
+                ["Research", "#pre-research"],
+                ["Roadmap", "#pre-roadmap"],
+                ["Deliverables", "#pre-deliverables"],
+              ]}
+              color="#5C89FA"
+            />,
+          ],
+          [
+            "Post-Transition",
+            <SubNav
+              items={[
+                ["Prioritize", "#post-prioritize"],
+                ["Research", "#post-research"],
+                ["Deliverables", "#post-deliverables"],
+              ]}
+              color="#5C89FA"
+            />,
+          ],
         ]}
       />
       <div className="page-content">
@@ -192,7 +217,7 @@ export const StateMedicaidAgency = () => {
           </section>
           <section id="pre-transition">
             <h2 className="eyebrow">Phase 1: Pre-transition</h2>
-            <div>
+            <div id="pre-research">
               <h3>Speaking with SMEs to understand needs and assess impacts</h3>
               <p>
                 Due to time and budget constraints, I didn't have access to end
@@ -267,7 +292,7 @@ export const StateMedicaidAgency = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div id="pre-roadmap">
               <h3>Roadmapping to align messaging across platforms</h3>
               <p>
                 This UX content was part of a larger messaging campaign that I
@@ -286,7 +311,7 @@ export const StateMedicaidAgency = () => {
                 altText="Content roadmap displaying tasks categorized under key objectives, along with information for channel, status, and schedule"
               />
             </div>
-            <div>
+            <div id="pre-deliverables">
               <h3>Deliverables</h3>
               <p>
                 The two end users' goals felt a bit at odds – providers wanted
@@ -352,7 +377,7 @@ export const StateMedicaidAgency = () => {
           </section>
           <section id="post-transition">
             <h2 className="eyebrow">Phase 2: Post-transition</h2>
-            <div>
+            <div id="post-prioritize">
               <h3>
                 The onboarding solution should prioritize healthcare provider
                 users
@@ -381,7 +406,7 @@ export const StateMedicaidAgency = () => {
                 <li>Create a solution that providers could easily revisit</li>
               </ul>
             </div>
-            <div>
+            <div id="post-research">
               <h3>Once again, I spoke to SMEs to inform content needs</h3>
               <p>
                 I spoke with product owners and other technical stakeholders to
@@ -395,7 +420,7 @@ export const StateMedicaidAgency = () => {
                 user-friendly, visual journey maps for providers.
               </p>
             </div>
-            <div>
+            <div id="post-deliverables">
               <h3>Deliverables</h3>
               <p>
                 I created sets of visual journey maps for technical areas such
