@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css";
+import "./Tools.css";
 
 type Props = {
   toolImgSrcs: string[];
@@ -23,15 +24,18 @@ export const Tools = ({ toolImgSrcs, toolNames }: Props) => {
   const imgRefs = toolNames?.map(() => useRef(null));
 
   return (
-    <section className="tools">
-      {toolImgSrcs.map((imgSrc, index) => (
-        <img
-          key={index}
-          ref={imgRefs ? imgRefs[index] : null}
-          src={imgSrc}
-          alt={toolNames ? toolNames[index] : ""}
-        />
-      ))}
+    <section id="tools">
+      <h2 className="eyebrow">Tools</h2>
+      <div>
+        {toolImgSrcs.map((imgSrc, index) => (
+          <img
+            key={index}
+            ref={imgRefs ? imgRefs[index] : null}
+            src={imgSrc}
+            alt={toolNames ? toolNames[index] : ""}
+          />
+        ))}
+      </div>
     </section>
   );
 };

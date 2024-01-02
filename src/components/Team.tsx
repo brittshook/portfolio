@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css";
+import "./Team.css";
 
 type Props = {
   teamImgSrcs: string[];
@@ -38,15 +39,18 @@ export const Team = ({ teamImgSrcs, teamNames, teamRoles }: Props) => {
   };
 
   return (
-    <section className="team">
-      {teamImgSrcs.map((imgSrc, index) => (
-        <img
-          key={index}
-          ref={imgRefs ? imgRefs[index] : null}
-          src={imgSrc}
-          alt={teamNames ? teamNames[index] : ""}
-        />
-      ))}
+    <section id="team">
+      <h2 className="eyebrow">Team</h2>
+      <div id="members">
+        {teamImgSrcs.map((imgSrc, index) => (
+          <img
+            key={index}
+            ref={imgRefs ? imgRefs[index] : null}
+            src={imgSrc}
+            alt={teamNames ? teamNames[index] : ""}
+          />
+        ))}
+      </div>
     </section>
   );
 };

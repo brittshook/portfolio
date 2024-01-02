@@ -1,5 +1,6 @@
 import { Team } from "./Team";
 import { Tools } from "./Tools";
+import "./CaseIntro.css";
 
 type Props = {
   title: string;
@@ -15,7 +16,7 @@ type Props = {
   teamNames?: string[];
   teamRoles?: string[];
   teamImgSrcs?: string[];
-}
+};
 
 export const CaseIntro = ({
   title,
@@ -49,7 +50,7 @@ export const CaseIntro = ({
       </div>
 
       {(showTeam || showTools) && (
-        <section className="details">
+        <section id="details">
           {showTeam && teamImgSrcs && teamNames && (
             <Team
               teamImgSrcs={teamImgSrcs}
