@@ -15,7 +15,7 @@ type Props = {
   altText: string;
   categories?: string[];
   showOnHomepage?: boolean;
-}
+};
 
 export const Card = ({
   showCaseStudyButton,
@@ -32,10 +32,10 @@ export const Card = ({
   const navigate = useNavigate();
   const handleClick = () => {
     {
-      caseStudyPath && navigate(caseStudyPath);
+      showCaseStudyButton && caseStudyPath && navigate(caseStudyPath);
     }
     {
-      demoLink && window.open(demoLink, "_blank");
+      showDemoButton && demoLink && window.open(demoLink, "_blank");
     }
   };
 
@@ -52,8 +52,10 @@ export const Card = ({
       <div id="info">
         <div id="details">
           <p className="title">
-            {caseStudyPath && <Link to={caseStudyPath}>{title}</Link>}
-            {demoLink && (
+            {showCaseStudyButton && caseStudyPath && (
+              <Link to={caseStudyPath}>{title}</Link>
+            )}
+            {showDemoButton && demoLink && (
               <a href={demoLink} target="_blank">
                 {title}
               </a>
