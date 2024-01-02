@@ -6,6 +6,7 @@ import { EnlargeImage } from "../../components/EnlargeImage";
 import "./StravaFit.css";
 import { Insight } from "../../components/Insight";
 import { Video } from "../../components/Video";
+import { SubNav } from "../../components/SubNav";
 
 export const StravaFit = () => {
   useEffect(() => {
@@ -21,33 +22,27 @@ export const StravaFit = () => {
           ["Background", "#background"],
           ["Research", "#research"],
           ["Design", "#design"],
-          ["Test", "#test"],
+          ["User Test", "#user-test"],
           ["Development", "#development"],
+        ]}
+        subNav={[
+          [
+            "Design",
+            <SubNav
+              items={[
+                ["Define", "#define"],
+                ["Co-design", "#co-design"],
+                ["Sort & Filter", "#sort-filter"],
+                ["Library", "#library"],
+                ["Empty States", "#empty-states"],
+              ]}
+              color="var(--surface-brand-strava, #E96127)"
+            />,
+          ],
         ]}
       />
       <div className="page-content">
-        <CaseIntro
-          title="Designing a cohesive experience across platforms"
-          subtitle="StravaFit"
-          imgSrc="/images/stravafit/cover.webp"
-          altText=""
-          description="I paired with another full-stack engineer to develop a guided workout feature for the Strava web platform."
-          additionalDescription="This is a student project completed as a part of Designlab's UX Academy. Please note that this is a concept feature created for Strava as a personal project."
-          showTeam={true}
-          teamImgSrcs={[
-            "/icons/profile_pic/britt.webp",
-            "/icons/profile_pic/george.webp",
-          ]}
-          teamNames={["Britt", "George"]}
-          teamRoles={["Designer & Front-End Developer", "Front-End Developer"]}
-          showTools={true}
-          toolNames={["Figma", "React", "TypeScript"]}
-          toolImgSrcs={[
-            "/icons/tool/figma.webp",
-            "/icons/tool/react.webp",
-            "/icons/tool/typescript.webp",
-          ]}
-        />
+        <CaseIntro customSubtitle="StravaFit" />
         <section className="case-study-text">
           <section id="background">
             <div>
@@ -162,7 +157,7 @@ export const StravaFit = () => {
           </section>
           <section id="design">
             <h2 className="eyebrow">Design</h2>
-            <div>
+            <div id="define">
               <h3>
                 Aligning goals using a Product Requirements Document (PRD)
               </h3>
@@ -179,9 +174,7 @@ export const StravaFit = () => {
               </p>
               <EnlargeImage src="/images/stravafit/prd.webp" altText="" />
             </div>
-          </section>
-          <section id="design">
-            <div>
+            <div id="co-design">
               <h3>Co-designing cards with end users at the lo-fi stage</h3>
               <p>
                 When designing the workout cards for the content library, I
@@ -194,7 +187,7 @@ export const StravaFit = () => {
               </p>
               <EnlargeImage src="/images/stravafit/co_design.webp" altText="" />
             </div>
-            <div>
+            <div id="sort-filter">
               <h3>
                 Sorting and filtering so that users can find workouts
                 efficiently
@@ -213,7 +206,7 @@ export const StravaFit = () => {
                 <img src="/images/stravafit/sort_and_filter.webp" alt="" />
               </div>
             </div>
-            <div>
+            <div id="library">
               <h3>Designing the nuances of a content library</h3>
               <p>This project was full of UX considerations like–</p>
               <div className="callout">
@@ -265,7 +258,7 @@ export const StravaFit = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div id="empty-states">
               <h3>Designing for empty states</h3>
               <p>
                 I had two types of empty states in this project: an empty
@@ -305,8 +298,8 @@ export const StravaFit = () => {
               </div>
             </div>
           </section>
-          <section id="test">
-            <h2 className="eyebrow">Test</h2>
+          <section id="user-test">
+            <h2 className="eyebrow">User Test</h2>
             <div>
               <h3>
                 Conducting unmoderated tests to save time and gather data-rich

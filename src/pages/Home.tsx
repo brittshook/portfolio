@@ -1,32 +1,18 @@
 import { NavBar } from "../components/NavBar";
 import { Card } from "../components/Card";
 import "./Home.css";
-import { useEffect, useState } from "react";
-import { WorkData } from "./work/WorkData";
+import { useEffect } from "react";
+import { projectData } from "./work/ProjectData";
 
 export const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const filteredData = WorkData.filter((data) => data.showOnHomepage);
+  const filteredData = projectData.filter((data) => data.showOnHomepage);
 
-  const cards = filteredData.map((data, index) => {
-    return (
-      <Card
-        key={index}
-        showCaseStudyButton={data.showCaseStudyButton || false}
-        caseStudyPath={data.caseStudyPath || ""}
-        showDemoButton={data.showDemoButton || false}
-        demoLink={data.demoLink || ""}
-        showGithubButton={data.showGithubButton || false}
-        githubRepoLink={data.githubRepoLink || ""}
-        title={data.title}
-        description={data.description}
-        imageSrc={data.imgSrc}
-        altText={data.altText}
-      />
-    );
+  const cards = filteredData.map((project) => {
+    return <Card data={project} />;
   });
 
   return (

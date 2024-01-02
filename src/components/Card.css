@@ -22,12 +22,12 @@
   margin-bottom: 6px !important;
 }
 
+.card p.subtitle {
+  color: var(--text-secondary-light, #949494);
+}
+
 @media screen and (max-width: 449px) {
   .card .callout {
     height: 330px;
   }
-}
-
-.card p.description {
-  color: var(--text-secondary-light, #949494);
 }

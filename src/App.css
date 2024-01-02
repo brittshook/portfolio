@@ -22,6 +22,9 @@ hr {
   --surface-primary: #fff;
   --surface-secondary: #ededed;
   --surface-border: #eee;
+  --surface-brand-mahalia: #d8d339;
+  --surface-brand-medicaid: #5c89fa;
+  --surface-brand-strava: #e96127;
   --text-primary: #101010;
   --text-secondary-light: #949494;
   --text-secondary-dark: #525252;
@@ -51,7 +54,6 @@ div.callout,
 .page-content,
 .btn-container,
 #overview,
-.case-headers,
 .case-study-text {
   display: flex;
 }
@@ -74,11 +76,6 @@ main {
 
 #overview {
   gap: 30px;
-}
-
-.case-headers {
-  flex-direction: column-reverse;
-  gap: 8px;
 }
 
 .case-study .page-content {
@@ -129,7 +126,6 @@ img {
 }
 
 h2.eyebrow,
-.case-headers p,
 p.caption,
 figcaption,
 .secondary {
@@ -178,7 +174,7 @@ figcaption {
   text-align: center;
 }
 
-p.small-text {
+.small-text {
   font-size: 14px;
 }
 

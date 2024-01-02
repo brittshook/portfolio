@@ -1,3 +1,22 @@
+#overview header,
+#overview .headings {
+  display: flex;
+}
+
+#overview header {
+  justify-content: space-between;
+  align-items: start;
+}
+
+#overview .headings {
+  flex-direction: column-reverse;
+  gap: 6px;
+}
+
+#overview .headings p {
+  color: var(--text-secondary-light, #949494);
+}
+
 #overview #details {
   display: flex;
 }

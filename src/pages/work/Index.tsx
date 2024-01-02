@@ -1,7 +1,7 @@
 import { NavBar } from "../../components/NavBar";
 import { Card } from "../../components/Card";
 import { Filter } from "../../components/Filter";
-import { WorkData } from "./WorkData";
+import { projectData } from "./ProjectData";
 import { useState, useEffect } from "react";
 import "./Index.css";
 
@@ -16,30 +16,15 @@ export const Work = () => {
     let filteredData;
 
     if (category) {
-      filteredData = WorkData.filter((data) =>
-        data.categories.includes(category)
+      filteredData = projectData.filter((project) =>
+        project.categories.includes(category)
       );
     } else {
-      filteredData = WorkData;
+      filteredData = projectData;
     }
 
-    const cards = filteredData.map((data, index) => {
-      return (
-        <Card
-          key={index}
-          showCaseStudyButton={data.showCaseStudyButton || false}
-          caseStudyPath={data.caseStudyPath || ""}
-          showDemoButton={data.showDemoButton || false}
-          demoLink={data.demoLink || ""}
-          showGithubButton={data.showGithubButton || false}
-          githubRepoLink={data.githubRepoLink || ""}
-          title={data.title}
-          description={data.description}
-          imageSrc={data.imgSrc}
-          altText={data.altText}
-          categories={data.categories}
-        />
-      );
+    const cards = filteredData.map((project) => {
+      return <Card data={project} />;
     });
 
     setDisplayCards(cards);

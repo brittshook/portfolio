@@ -1,41 +1,24 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "./Button";
 import "./Card.css";
+import { Project } from "../pages/work/ProjectData";
 
 type Props = {
-  showCaseStudyButton?: boolean;
-  caseStudyPath?: string;
-  showDemoButton?: boolean;
-  demoLink?: string;
-  showGithubButton?: boolean;
-  githubRepoLink?: string;
-  title: string;
-  description: string;
-  imageSrc: string;
-  altText: string;
-  categories?: string[];
-  showOnHomepage?: boolean;
+  data: Project;
 };
 
-export const Card = ({
-  showCaseStudyButton,
-  caseStudyPath,
-  showDemoButton,
-  demoLink,
-  showGithubButton,
-  githubRepoLink,
-  title,
-  description,
-  imageSrc,
-  altText,
-}: Props) => {
+export const Card = ({ data }: Props) => {
   const navigate = useNavigate();
   const handleClick = () => {
     {
-      showCaseStudyButton && caseStudyPath && navigate(caseStudyPath);
+      data.showCaseStudyButton &&
+        data.caseStudyPath &&
+        navigate(data.caseStudyPath);
     }
     {
-      showDemoButton && demoLink && window.open(demoLink, "_blank");
+      data.showDemoButton &&
+        data.demoLink &&
+        window.open(data.demoLink, "_blank");
     }
   };
 
@@ -43,8 +26,8 @@ export const Card = ({
     <div className="card">
       <div className="callout">
         <img
-          src={imageSrc}
-          alt={altText}
+          src={data.imgSrc}
+          alt={data.altText}
           onClick={handleClick}
           className="has-click-event cover"
         ></img>
@@ -52,47 +35,47 @@ export const Card = ({
       <div id="info">
         <div id="details">
           <p className="title">
-            {showCaseStudyButton && caseStudyPath && (
-              <Link to={caseStudyPath}>{title}</Link>
+            {data.showCaseStudyButton && data.caseStudyPath && (
+              <Link to={data.caseStudyPath}>{data.title}</Link>
             )}
-            {showDemoButton && demoLink && (
-              <a href={demoLink} target="_blank">
-                {title}
+            {data.showDemoButton && data.demoLink && (
+              <a href={data.demoLink} target="_blank">
+                {data.title}
               </a>
             )}
           </p>
-          <p className="description">{description}</p>
+          <p className="subtitle">{data.subtitle}</p>
         </div>
         <div className="btn-container">
-          {showGithubButton && (
+          {data.showGithubButton && (
             <Button
               type="button"
               imgSrc="/icons/github.svg"
               altText="github"
               showTooltip={true}
-              goToExternalPage={githubRepoLink}
+              goToExternalPage={data.githubRepoLink}
             >
               Github
             </Button>
           )}
-          {showCaseStudyButton && (
+          {data.showCaseStudyButton && (
             <Button
               type="button"
               imgSrc="/icons/arrow_right.svg"
               altText="case study"
               showTooltip={true}
-              goToInternalPage={caseStudyPath}
+              goToInternalPage={data.caseStudyPath}
             >
               Case Study
             </Button>
           )}
-          {showDemoButton && (
+          {data.showDemoButton && (
             <Button
               type="button"
               imgSrc="/icons/arrow_topright.svg"
               altText="demo"
               showTooltip={true}
-              goToExternalPage={demoLink}
+              goToExternalPage={data!.demoLink}
             >
               Demo
             </Button>

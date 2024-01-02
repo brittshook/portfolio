@@ -1,65 +1,73 @@
 import { Team } from "./Team";
 import { Tools } from "./Tools";
 import "./CaseIntro.css";
+import { Button } from "./Button";
+import { projectData } from "../pages/work/ProjectData";
+import { useLocation } from "react-router-dom";
 
 type Props = {
-  title: string;
-  subtitle: string;
-  imgSrc: string;
-  altText: string;
-  description: string;
-  additionalDescription?: string;
-  showTools?: boolean;
-  toolImgSrcs?: string[];
-  toolNames?: string[];
-  showTeam?: boolean;
-  teamNames?: string[];
-  teamRoles?: string[];
-  teamImgSrcs?: string[];
+  customSubtitle?: string;
 };
 
-export const CaseIntro = ({
-  title,
-  subtitle,
-  imgSrc,
-  altText,
-  description,
-  additionalDescription,
-  showTools,
-  toolImgSrcs,
-  toolNames,
-  showTeam,
-  teamNames,
-  teamRoles,
-  teamImgSrcs,
-}: Props) => {
+export const CaseIntro = ({ customSubtitle }: Props) => {
+  const location = useLocation();
+  const data = projectData.find(
+    (project) =>
+      project.caseStudyPath && project.caseStudyPath === location.pathname
+  );
   return (
     <section id="overview">
-      <div className="case-headers">
-        <h1>{title}</h1>
-        <p>{subtitle}</p>
-      </div>
+      <header>
+        <div className="headings">
+          <h1>{data!.title}</h1>
+          <p>{customSubtitle || data!.subtitle}</p>
+        </div>
+        {(data!.demoLink || false) && (
+          <Button
+            type="button"
+            imgSrc="/icons/arrow_topright.svg"
+            showTooltip={true}
+            goToExternalPage={data!.demoLink}
+          >
+            Visit Website
+          </Button>
+        )}
+      </header>
       <div className="callout">
-        <img src={imgSrc} alt={altText} title={altText} className="cover" />
+        <img
+          src={data!.imgSrc}
+          alt={data!.altText}
+          title={data!.altText}
+          className="cover"
+        />
       </div>
       <div>
-        <p className="large-text">{description}</p>
-        {additionalDescription && (
-          <p className="large-text secondary">{additionalDescription}</p>
+        <p className="large-text">{data!.description}</p>
+        {data!.additionalDescription && (
+          <p className="large-text secondary">{data!.additionalDescription}</p>
         )}
       </div>
 
-      {(showTeam || showTools) && (
+      {(data!.teamNames || data!.toolNames) && (
         <section id="details">
-          {showTeam && teamImgSrcs && teamNames && (
+          {data!.teamNames && data!.teamRoles && (
             <Team
-              teamImgSrcs={teamImgSrcs}
-              teamNames={teamNames}
-              teamRoles={teamRoles}
+              teamImgSrcs={data!.teamNames.map(
+                (memberName) =>
+                  `/icons/profile_pic/${memberName.toLowerCase()}.webp`
+              )}
+              teamNames={data!.teamNames}
+              teamRoles={data!.teamRoles}
             />
           )}
-          {showTools && toolImgSrcs && toolNames && (
-            <Tools toolImgSrcs={toolImgSrcs} toolNames={toolNames} />
+          {data!.toolNames && (
+            <Tools
+              toolImgSrcs={data!.toolNames.map(
+                (tool) =>
+                  `/icons/tool/${tool.toLowerCase().replace(/\s/g, "_")}.webp`
+              )}
+              toolNames={data!.toolNames}
+            />
           )}
         </section>
       )}

@@ -4,6 +4,7 @@ import { NavBar } from "../../components/NavBar";
 import { SpeechBubble } from "../../components/SpeechBubble";
 import { EnlargeImage } from "../../components/EnlargeImage";
 import "./MahaliaXiaoqi.css";
+import { SubNav } from "../../components/SubNav";
 
 export const MahaliaXiaoqi = () => {
   useEffect(() => {
@@ -19,26 +20,27 @@ export const MahaliaXiaoqi = () => {
           ["Background", "#background"],
           ["Research", "#research"],
           ["Design", "#design"],
-          ["Test", "#test"],
+          ["User Test", "#user-test"],
           ["Development", "#development"],
           ["Next Steps", "#next-steps"],
         ]}
+        subNav={[
+          [
+            "Design",
+            <SubNav
+              items={[
+                ["Info Architecture", "#info-arch"],
+                ["Crazy 8s", "#crazy8"],
+                ["Form Modals", "#modals"],
+                ["Error States", "#error-states"],
+              ]}
+              color="var(--surface-brand-mahalia, #D8D339)"
+            />,
+          ],
+        ]}
       />
       <div className="page-content">
-        <CaseIntro
-          title="Driving conversions in a bite-size tattoo portfolio"
-          subtitle="Mahalia Xiaoqi"
-          imgSrc="/images/mahalia_xiaoqi/cover.webp"
-          altText="Mahalia Xiaoqi's tattoo portfolio homepage displayed on desktop and mobile devices"
-          description="I led the end-to-end design and development of a bite-sized tattoo portfolio, including content & product design, to draw clientele for a budding artist."
-          showTools={true}
-          toolNames={["HTML", "CSS", "JavaScript"]}
-          toolImgSrcs={[
-            "/icons/tool/html5.webp",
-            "/icons/tool/css3.webp",
-            "/icons/tool/javascript.webp",
-          ]}
-        />
+        <CaseIntro customSubtitle="Mahalia Xiaoqi" />
         <section className="case-study-text">
           <section id="background">
             <h2 className="eyebrow">Background</h2>
@@ -102,15 +104,24 @@ export const MahaliaXiaoqi = () => {
                 the industry
               </h3>
               <div className="speech-bubbles">
-                <SpeechBubble color="#D8D339" orientation="left">
+                <SpeechBubble
+                  color="var(--surface-brand-mahalia, #D8D339)"
+                  orientation="left"
+                >
                   It's confusing that all booking procedures are so different
                   among the industry.
                 </SpeechBubble>
-                <SpeechBubble color="#D8D339" orientation="right">
+                <SpeechBubble
+                  color="var(--surface-brand-mahalia, #D8D339)"
+                  orientation="right"
+                >
                   Some artists are like… send me a DM, some say no DMs - send me
                   an email, some have a form!
                 </SpeechBubble>
-                <SpeechBubble color="#D8D339" orientation="left">
+                <SpeechBubble
+                  color="var(--surface-brand-mahalia, #D8D339)"
+                  orientation="left"
+                >
                   The process has changed since the pandemic. [Before,] the
                   consultation was always a separate appointment. Since the
                   pandemic… the consultation is usually over email or phone call
@@ -122,7 +133,10 @@ export const MahaliaXiaoqi = () => {
               <h3>
                 … but users prefer to use online booking systems when available
               </h3>
-              <SpeechBubble color="#D8D339" orientation="left">
+              <SpeechBubble
+                color="var(--surface-brand-mahalia, #D8D339)"
+                orientation="left"
+              >
                 As a customer, with a form… I'm{" "}
                 <span className="bold">
                   confident we're speaking the same language
@@ -143,7 +157,7 @@ export const MahaliaXiaoqi = () => {
           </section>
           <section id="design">
             <h2 className="eyebrow">Design</h2>
-            <div>
+            <div id="info-arch">
               <h3>
                 Incentivizing action for fresh-skinned newbies and tattoo
                 veterans
@@ -177,7 +191,7 @@ export const MahaliaXiaoqi = () => {
                 altText="Information architecture diagram for the homepage and form modal's content"
               />
             </div>
-            <div>
+            <div id="crazy8">
               <h3>Using Crazy 8s to quickly ideate on page elements</h3>
               <p>
                 Given the shortened nature of a one-page portfolio, my sketches
@@ -189,7 +203,7 @@ export const MahaliaXiaoqi = () => {
                 altText="Crazy 8s sketch sheets featuring eight quick design concepts for Selected Work and FAQ page elements"
               />
             </div>
-            <div>
+            <div id="modals">
               <h3>
                 Making a one-page portfolio feel like a traditional site with
                 clever modals
@@ -223,7 +237,7 @@ export const MahaliaXiaoqi = () => {
                 altText="Form page for basic tattoo details, shown on desktop and mobile devices"
               />
             </div>
-            <div>
+            <div id="error-states">
               <h3>Designing intuitive success and error states</h3>
               <p>
                 Sometimes <span className="italic">component states</span> speak
@@ -263,8 +277,8 @@ export const MahaliaXiaoqi = () => {
               />
             </div>
           </section>
-          <section id="test">
-            <h2 className="eyebrow">Test</h2>
+          <section id="user-test">
+            <h2 className="eyebrow">User Test</h2>
             <div>
               <h3>
                 I tested across breakpoints to ensure a consistent user
