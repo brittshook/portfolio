@@ -5,7 +5,6 @@ import { Contact } from "./pages/Contact";
 import { Home } from "./pages/Home";
 import { Work } from "./pages/work/Index";
 import { MahaliaXiaoqi } from "./pages/work/MahaliaXiaoqi";
-import { PridePac } from "./pages/work/PridePac";
 import { StateMedicaidAgency } from "./pages/work/StateMedicaidAgency";
 import { StravaFit } from "./pages/work/StravaFit";
 import { NoPage } from "./pages/NoPage";
@@ -21,7 +20,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/work" element={<Work />} />
           <Route path="/work/mahalia-xiaoqi" element={<MahaliaXiaoqi />} />
-          <Route path="/work/pride-pac" element={<PridePac />} />
           <Route
             path="/work/state-medicaid-agency"
             element={<StateMedicaidAgency />}
