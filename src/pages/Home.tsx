@@ -1,7 +1,7 @@
 import { NavBar } from "../components/NavBar";
 import { Card } from "../components/Card";
 import "./Home.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { projectData } from "./work/ProjectData";
 
 export const Home = () => {
@@ -9,10 +9,25 @@ export const Home = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const [showHeader, setShowHeader] = useState(true);
+  useEffect(() => {
+    const handleResize = () => {
+      setShowHeader(window.innerWidth >= 750);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const filteredData = projectData.filter((data) => data.showOnHomepage);
 
-  const cards = filteredData.map((project) => {
-    return <Card data={project} />;
+  const cards = filteredData.map((project, index) => {
+    return <Card key={index} data={project} />;
   });
 
   return (
@@ -20,7 +35,7 @@ export const Home = () => {
       <NavBar />
       <div className="page-content">
         <section className="intro">
-          <h1>Britt Shook</h1>
+          {showHeader && <h1>Britt Shook</h1>}
           <p>
             Full-stack software engineer and compassionate problem-solver,
             currently working to advance environmental justice for Black South

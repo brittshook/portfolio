@@ -13,7 +13,9 @@ type Props = {
   showTooltip?: boolean;
   goToInternalPage?: string;
   goToExternalPage?: string;
-}
+  onClick?: () => void;
+  id?: string;
+};
 
 export const Button = ({
   type,
@@ -24,6 +26,8 @@ export const Button = ({
   showTooltip,
   goToInternalPage,
   goToExternalPage,
+  onClick,
+  id,
 }: Props) => {
   const buttonRef = useRef(null);
 
@@ -48,7 +52,12 @@ export const Button = ({
   };
 
   return (
-    <button ref={buttonRef} type={type} onClick={handleClick}>
+    <button
+      id={id}
+      ref={buttonRef}
+      type={type}
+      onClick={onClick || handleClick}
+    >
       {showText && children}
       {imgSrc != null && <img src={imgSrc} alt={altText || ""} />}
     </button>

@@ -98,7 +98,7 @@ export const About = () => {
           </p>
         </div>
         <div className="textbox">
-          <h2 className="small-header">I'm a T-shaped designer who…</h2>
+          <h2 className="small-header">I'm a T-shaped designer who...</h2>
           <p>
             has a breadth of skills across <a>content design</a>,{" "}
             <a>product design</a>, and <a>web development</a>, with deep

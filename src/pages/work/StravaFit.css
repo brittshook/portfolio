@@ -19,7 +19,8 @@
   margin-bottom: 10px;
 }
 
-#stravafit .mobile {
+#stravafit img.mobile,
+#stravafit video.mobile {
   width: 250px;
   height: 530px;
 }

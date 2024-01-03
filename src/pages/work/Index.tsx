@@ -23,8 +23,8 @@ export const Work = () => {
       filteredData = projectData;
     }
 
-    const cards = filteredData.map((project) => {
-      return <Card data={project} />;
+    const cards = filteredData.map((project, index) => {
+      return <Card key={index} data={project} />;
     });
 
     setDisplayCards(cards);

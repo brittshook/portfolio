@@ -29,7 +29,7 @@ export const MahaliaXiaoqi = () => {
             "Design",
             <SubNav
               items={[
-                ["Info Architecture", "#info-arch"],
+                ["Info Architect", "#info-arch"],
                 ["Crazy 8s", "#crazy8"],
                 ["Form Modals", "#modals"],
                 ["Error States", "#error-states"],
