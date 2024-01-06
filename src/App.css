@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -10,178 +14,25 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-html,
-body,
-.page-content,
-img,
-hr {
-  width: 100%;
-}
-
 :root {
-  --surface-primary: #fff;
-  --surface-secondary: #ededed;
-  --surface-border: #eee;
-  --surface-brand-mahalia: #d8d339;
-  --surface-brand-medicaid: #5c89fa;
-  --surface-brand-strava: #e96127;
   --text-primary: #101010;
-  --text-secondary-light: #949494;
-  --text-secondary-dark: #525252;
   --text-link: #0099ff;
   --text-link-hover: #0088ff;
 }
 
-body,
-footer {
-  background-color: var(--surface-primary, #fff);
-}
-
-body,
-footer,
 img {
   color: var(--text-primary, #101010);
+  font-size: 0.9375rem;
+  text-transform: lowercase;
 }
 
-body,
-footer,
-button {
-  font-family: "Instrument Sans", Arial, Helvetica, sans-serif;
-}
-
-main,
-div.callout,
-.page-content,
-.btn-container,
-#overview,
-.case-study-text {
-  display: flex;
-}
-
-.page-content,
-#overview,
-.case-study-text {
-  flex-direction: column;
-}
-
-main,
-div.callout {
-  justify-content: center;
-}
-
-main {
-  padding: 80px 40px 120px 20px;
-  gap: 70px;
-}
-
-#overview {
-  gap: 30px;
-}
-
-.case-study .page-content {
-  gap: 100px;
-}
-
-.case-study-text {
-  gap: 75px;
-}
-
-.case-study-text > section > div {
-  margin-bottom: 50px;
-}
-
-div.callout {
-  background-color: var(--surface-secondary, #ededed);
-  align-items: center;
-  padding: 30px;
-  border-radius: 3px;
-}
-
-h1,
-h2,
-h3,
-.bold,
-#site-name {
-  font-weight: 600;
-}
-
-h1,
-#site-name {
-  font-size: 20px;
-}
-
-h1,
-.large-text {
-  line-height: 24px;
-}
-
-h2.eyebrow {
-  font-weight: 400;
-  font-family: "IBM Plex Mono", "Courier New", Courier, monospace;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-h2.eyebrow,
-img {
-  font-size: 15px;
-}
-
-h2.eyebrow,
-p.caption,
-figcaption,
-.secondary {
-  color: var(--text-secondary-light, #949494);
-}
-
-h2.eyebrow,
-p.caption,
-figcaption,
-p.small-text {
-  line-height: 20px;
-}
-
-h3 {
-  line-height: 26px;
-}
-
-h3,
-h4,
-.large-text {
-  font-size: 18px;
-}
-
-.case-study h3,
-.case-study h4 {
-  margin-bottom: 15px;
-}
-
-p,
-span {
-  font-size: 16px;
-  line-height: 22px;
-}
-
-p:not(p:last-child):not(p.tooltip),
+p:not(p:last-child):not(p.tooltip):not(.card p),
 ul:not(ul:last-child),
 ol:not(ul:last-child),
-img:not(img:last-child),
-video:not(video:last-child),
+.case-study img:not(img:last-child),
+.case-study video:not(video:last-child),
 div.callout:not(div.callout:last-child) {
-  margin-bottom: 20px;
-}
-
-p.caption,
-figcaption {
-  text-align: center;
-}
-
-.small-text {
-  font-size: 14px;
-}
-
-p.small-text {
-  color: var(--text-secondary-dark, #303030);
+  margin-bottom: 1.25rem;
 }
 
 a {
@@ -194,93 +45,8 @@ a:hover {
   text-decoration: underline;
 }
 
-.page-content {
-  margin-top: 17px;
-  max-width: 700px;
-}
-
-img {
-  text-transform: lowercase;
-}
-
-.italic {
-  font-style: italic;
-}
-
-button,
-a,
-.has-click-event {
-  cursor: pointer;
-}
-
-.btn-container {
-  width: fit-content;
-  gap: 12px;
-}
-
 ul,
 ol {
   list-style-position: inside;
-}
-
-hr {
-  height: 2px;
-  background-color: var(--surface-border, #eee);
-  margin-bottom: 18px;
-}
-
-div.callout img {
-  object-fit: contain;
-}
-
-div.callout img.cover {
-  max-width: 100%;
-  width: 544px;
-  height: 354px;
-}
-
-@media screen and (max-width: 999px) {
-  .page-content {
-    max-width: none;
-  }
-}
-
-@media screen and (max-width: 999px) and (min-width: 750px) {
-  main {
-    padding-top: 75px;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-
-@media screen and (max-width: 749px) and (min-width: 450px) {
-  main {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-
-@media screen and (max-width: 449px) {
-  main {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  h1 {
-    font-size: 22px;
-    line-height: 27px;
-  }
-
-  h3 {
-    font-size: 20px;
-  }
-
-  .large-text {
-    line-height: 25px;
-  }
-
-  p {
-    font-size: 18px;
-    line-height: 23px;
-  }
+  list-style-type: initial;
 }

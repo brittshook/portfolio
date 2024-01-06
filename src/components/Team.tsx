@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css";
-import "./Team.css";
 
 type Props = {
   teamImgSrcs: string[];
@@ -29,21 +28,24 @@ export const Team = ({ teamImgSrcs, teamNames, teamRoles }: Props) => {
   const imgRefs = teamNames?.map(() => useRef(null));
 
   const generateTooltipContent = (name: string, role: string | null) => {
-    let content = `<p class="bold tooltip">${name}</p>`;
+    let content = `<p class="font-bold text-base tooltip">${name}</p>`;
 
     if (role) {
-      content += `<p class="italic tooltip">${role}</p>`;
+      content += `<p class="italic text-base tooltip">${role}</p>`;
     }
 
     return content;
   };
 
   return (
-    <section id="team">
-      <h2 className="eyebrow">Team</h2>
-      <div id="members">
+    <section id="team" className="inline-block w-1/2">
+      <h2 className="font-mono text-sm max-sm:text-base font-normal mb-2.5 text-t-secondary-light uppercase">
+        Team
+      </h2>
+      <div className="flex gap-2">
         {teamImgSrcs.map((imgSrc, index) => (
           <img
+            className="w-10.5 h-10.5 rounded-full border border-solid border-s-border"
             key={index}
             ref={imgRefs ? imgRefs[index] : null}
             src={imgSrc}

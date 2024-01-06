@@ -1,9 +1,9 @@
+import { useLocation } from "react-router-dom";
 import { Team } from "./Team";
 import { Tools } from "./Tools";
-import "./CaseIntro.css";
 import { Button } from "./Button";
 import { projectData } from "../pages/work/ProjectData";
-import { useLocation } from "react-router-dom";
+import { Callout } from "./Callout";
 
 type Props = {
   customSubtitle?: string;
@@ -16,11 +16,15 @@ export const CaseIntro = ({ customSubtitle }: Props) => {
       project.caseStudyPath && project.caseStudyPath === location.pathname
   );
   return (
-    <section id="overview">
-      <header>
-        <div className="headings">
-          <h1>{data!.title}</h1>
-          <p>{customSubtitle || data!.subtitle}</p>
+    <section id="overview" className="flex flex-col gap-8">
+      <header className="flex justify-between items-start">
+        <div className="flex flex-col-reverse gap-0.5">
+          <h1 className="text-xl font-bold mb-2.5 max-sm:text-2-xl">
+            {data!.title}
+          </h1>
+          <p className="text-base max-sm:text-lg text-t-secondary-light">
+            {customSubtitle || data!.subtitle}
+          </p>
         </div>
         {(data!.demoLink || false) && (
           <Button
@@ -33,23 +37,25 @@ export const CaseIntro = ({ customSubtitle }: Props) => {
           </Button>
         )}
       </header>
-      <div className="callout">
+      <Callout isCover={true}>
         <img
           src={data!.imgSrc}
           alt={data!.altText}
           title={data!.altText}
-          className="cover"
+          className="w-136 h-88.5 object-contain"
         />
-      </div>
+      </Callout>
       <div>
-        <p className="large-text">{data!.description}</p>
+        <p className="text-lg max-sm:text-xl">{data!.description}</p>
         {data!.additionalDescription && (
-          <p className="large-text secondary">{data!.additionalDescription}</p>
+          <p className="text-lg max-sm:text-xl text-t-secondary-light">
+            {data!.additionalDescription}
+          </p>
         )}
       </div>
 
       {(data!.teamNames || data!.toolNames) && (
-        <section id="details">
+        <section className="flex">
           {data!.teamNames && data!.teamRoles && (
             <Team
               teamImgSrcs={data!.teamNames.map(

@@ -1,8 +1,7 @@
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css";
-import "./Button.css";
-import { useNavigate } from "react-router-dom";
 
 type Props = {
   type: "submit" | "reset" | "button";
@@ -15,6 +14,14 @@ type Props = {
   goToExternalPage?: string;
   onClick?: () => void;
   id?: string;
+  className?: {
+    padding?: string;
+    background?: string;
+    borderRadius?: string;
+    borderWidth?: string;
+    height?: string;
+    other?: string;
+  };
 };
 
 export const Button = ({
@@ -28,6 +35,7 @@ export const Button = ({
   goToExternalPage,
   onClick,
   id,
+  className,
 }: Props) => {
   const buttonRef = useRef(null);
 
@@ -51,15 +59,27 @@ export const Button = ({
     }
   };
 
+  const height = className?.height || "h-11";
+  const padding =
+    className?.padding || (imgSrc?.includes("menu") ? "p-2" : "p-3");
+  const background = className?.background || "bg-s-primary";
+  const borderRadius = className?.borderRadius || "rounded-7";
+  const borderWidth = className?.borderWidth || "border";
+  const other = className?.other || "";
+  const imgSize = imgSrc?.includes("menu") ? "w-7 h-10" : "w-5 h-5";
+
   return (
     <button
       id={id}
       ref={buttonRef}
       type={type}
       onClick={onClick || handleClick}
+      className={`flex items-center justify-center ${height} ${padding} ${background} hover:bg-[#f5f5f5] ${borderRadius} ${borderWidth} border-[#c2baba] border-solid text-base font-sans max-sm:text-lg text-t-secondary-light capitalize ${other} cursor-pointer`}
     >
       {showText && children}
-      {imgSrc != null && <img src={imgSrc} alt={altText || ""} />}
+      {imgSrc != null && (
+        <img className={imgSize} src={imgSrc} alt={altText || ""} />
+      )}
     </button>
   );
 };

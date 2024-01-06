@@ -1,17 +1,19 @@
 import { ReactNode } from "react";
-import "./SpeechBubble.css";
 
 type Props = {
   children: ReactNode;
-  color: string;
   orientation: "left" | "right";
+  className?: string;
 };
 
-export const SpeechBubble = ({ children, color, orientation }: Props) => {
+export const SpeechBubble = ({ children, orientation, className }: Props) => {
   return (
     <div
-      className={`speech-bubble ${orientation}`}
-      style={{ backgroundColor: color }}
+      className={`text-base max-sm:text-lg w-full max-w-lg p-5 rounded-xl ${
+        orientation === "right"
+          ? "ml-auto rounded-br-none"
+          : "mr-auto rounded-bl-none"
+      } ${className ? className : ""}`}
     >
       "{children}"
     </div>

@@ -1,7 +1,6 @@
 import { ReactNode, useEffect, useRef, useState } from "react";
-import { Button } from "./Button";
-import "./NavBar.css";
 import { Link, useLocation } from "react-router-dom";
+import { Button } from "./Button";
 import { Menu } from "./Menu";
 
 type Props = {
@@ -112,18 +111,30 @@ export const NavBar = ({ isCaseStudy, items, subNav }: Props) => {
   if (showMobile) {
     return (
       <>
-        <nav style={navStyles}>
+        <nav
+          className="h-fit w-full fixed top-0 left-0 flex py-6 items-center justify-between z-20 sm:max-md:px-8 max-sm:px-5"
+          style={navStyles}
+        >
           {location.pathname === "/" ? (
-            <h1 id="site-name">
-              <Link to="/">Britt Shook</Link>
+            <h1 className="text-2-xl max-sm:text-3-xl font-bold">
+              <Link
+                className="text-t-primary hover:text-t-primary hover:no-underline"
+                to="/"
+              >
+                Britt Shook
+              </Link>
             </h1>
           ) : (
-            <span id="site-name">
-              <Link to="/">Britt Shook</Link>
+            <span className="text-2-sxl max-sm:text-3-xl font-bold">
+              <Link
+                className="text-t-primary hover:text-t-primary hover:no-underline"
+                to="/"
+              >
+                Britt Shook
+              </Link>
             </span>
           )}
           <Button
-            id="menu"
             type="button"
             imgSrc={menuButtonImg}
             altText={menuButtonAlt}
@@ -138,7 +149,7 @@ export const NavBar = ({ isCaseStudy, items, subNav }: Props) => {
   }
 
   return (
-    <nav>
+    <nav className="h-fit flex flex-col sticky top-20 items-end lg:backdrop-blur-sm lg:border-r lg:border-solid lg:border-s-border lg:py-5 lg:pr-8 lg:pl-0 min-w-33.5 max-lg:w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:z-20 md:max-lg:pt-8 md:max-lg:bg-none">
       {isCaseStudy && (
         <Button
           type="button"
@@ -146,20 +157,44 @@ export const NavBar = ({ isCaseStudy, items, subNav }: Props) => {
           altText="go back home"
           goToInternalPage="/"
           showTooltip
+          className={{
+            other: "mb-5 ml-auto w-11 md:max-lg:absolute md:max-lg:left-8",
+          }}
         >
           Go Home
         </Button>
       )}
-      <ul>
-        {navItems.map(([item, path]) => (
-          <li
-            className={`${activeItem === path ? "active " : ""}nav-link`}
-            key={item}
-          >
+      <ul
+        className={`text-anchor-base w-fit h-fit flex flex-col gap-5 list-none text-right ${
+          isCaseStudy ? "md:max-lg:text-sm" : "md:max-lg:gap-9"
+        } md:max-lg:flex-row md:max-lg:backdrop-blur-md md:max-lg:bg-transparent md:max-lg:rounded-lg md:max-lg:p-2.88 md:max-lg:mx-auto`}
+      >
+        {navItems.map(([item, path], index) => (
+          <li key={item}>
             {path.startsWith("/") ? (
-              <Link to={path}>{item}</Link>
+              <Link
+                className={`capitalize ${
+                  activeItem === path
+                    ? "text-t-primary hover:text-t-primary font-bold cursor-default"
+                    : "text-t-secondary-light  hover:text-t-secondary-dark cursor-pointer"
+                } hover:no-underline`}
+                to={path}
+              >
+                {item}
+              </Link>
             ) : (
-              <a href={path}>{item}</a>
+              <a
+                className={`${
+                  isCaseStudy && index == 0 ? "md:max-lg:hidden " : ""
+                }capitalize ${
+                  activeItem === path
+                    ? "text-t-primary hover:text-t-primary font-bold cursor-default"
+                    : "text-t-secondary-light  hover:text-t-secondary-dark cursor-pointer"
+                } hover:no-underline`}
+                href={path}
+              >
+                {item}
+              </a>
             )}
             {activeItem === path &&
               subNav &&

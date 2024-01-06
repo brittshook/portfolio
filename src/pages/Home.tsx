@@ -1,14 +1,9 @@
-import { NavBar } from "../components/NavBar";
-import { Card } from "../components/Card";
-import "./Home.css";
 import { useEffect, useState } from "react";
+import { Card } from "../components/Card";
+import { Page } from "../components/Page";
 import { projectData } from "./work/ProjectData";
 
 export const Home = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const [showHeader, setShowHeader] = useState(true);
   useEffect(() => {
     const handleResize = () => {
@@ -31,20 +26,23 @@ export const Home = () => {
   });
 
   return (
-    <main id="home">
-      <NavBar />
-      <div className="page-content">
-        <section className="intro">
-          {showHeader && <h1>Britt Shook</h1>}
-          <p>
-            Full-stack software engineer and compassionate problem-solver,
-            currently working to advance environmental justice for Black South
-            Carolinians @ OUR Strategies.
-          </p>
-          <p>Previously at Deloitte & Optum.</p>
-        </section>
-        {cards.map((card) => card)}
-      </div>
-    </main>
+    <Page id="home" type="main" gapClass="gap-12">
+      <section className="flex flex-col">
+        {showHeader && (
+          <h1 className="text-xl font-bold mb-2.5 max-sm:text-2-xl">
+            Britt Shook
+          </h1>
+        )}
+        <p className="text-base max-sm:text-lg">
+          Full-stack software engineer and compassionate problem-solver,
+          currently working to advance environmental justice for Black South
+          Carolinians @ OUR Strategies.
+        </p>
+        <p className="text-t-secondary-dark text-base max-sm:text-lg">
+          Previously at Deloitte & Optum.
+        </p>
+      </section>
+      {cards.map((card) => card)}
+    </Page>
   );
 };

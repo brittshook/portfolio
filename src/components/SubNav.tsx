@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./SubNav.css";
 
 type Props = {
   items: [string, string][];
@@ -62,13 +61,22 @@ export const SubNav = ({ items, color }: Props) => {
   }, [items]);
 
   return (
-    <ul className="sub-nav" style={{ borderRightColor: color }}>
-      {items.map(([item, path]) => (
-        <li
-          className={`${activeSubItem === path ? "active " : ""}nav-link`}
-          key={item}
-        >
-          <a href={path}>{item}</a>
+    <ul
+      className="md:max-lg:hidden mt-1.5 pt-1.5 pr-2.5 border-r border-solid list-none text-xs"
+      style={{ borderRightColor: color }}
+    >
+      {items.map(([item, path], index) => (
+        <li className="pb-1.5" key={item}>
+          <a
+            className={`capitalize ${
+              activeSubItem === path
+                ? "text-t-primary font-medium hover:text-t-primary"
+                : "text-t-secondary-light  hover:text-t-secondary-dark"
+            } hover:no-underline`}
+            href={path}
+          >
+            {item}
+          </a>
         </li>
       ))}
     </ul>
