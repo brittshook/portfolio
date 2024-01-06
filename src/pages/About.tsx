@@ -6,7 +6,7 @@ export const About = () => {
       <div className="flex mb-3 md:max-lg:mb-0 max-810:flex-col">
         <div className="relative w-fit h-fit max-810:mx-auto max-810:mb-4">
           <img
-            className="w-92 h-fit -translate-x-4.5 translate-y-1 max-810:w-74"
+            className="w-92 h-fit -translate-x-4.5 translate-y-1 max-810:w-74 max-810:h-81.5 object-contain"
             src="images/britt_polaroid.png"
             alt="Polaroid of Britt Shook smiling"
           />
