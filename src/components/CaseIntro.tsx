@@ -66,15 +66,7 @@ export const CaseIntro = ({ customSubtitle }: Props) => {
               teamRoles={data!.teamRoles}
             />
           )}
-          {data!.toolNames && (
-            <Tools
-              toolImgSrcs={data!.toolNames.map(
-                (tool) =>
-                  `/icons/tool/${tool.toLowerCase().replace(/\s/g, "_")}.webp`
-              )}
-              toolNames={data!.toolNames}
-            />
-          )}
+          {data!.toolNames && <Tools toolNames={data!.toolNames} />}
         </section>
       )}
     </section>

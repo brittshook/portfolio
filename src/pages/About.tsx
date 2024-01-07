@@ -1,4 +1,5 @@
 import { Page } from "../components/Page";
+import { Tools } from "../components/Tools";
 
 export const About = () => {
   return (
@@ -23,7 +24,7 @@ export const About = () => {
         </div>
         <div className="w-2/3 h-fit bg-[#fafafa] border border-s-border border-solid py-5 px-6 rounded-sm max-810:w-full">
           <h1 className="text-base font-bold mb-2.5 max-sm:text-lg">
-            I haven't always seen myself as a creative–
+            I haven't always seen been a software engineer...
           </h1>
           <p className="text-base max-sm:text-lg">
             In another life, I studied the{" "}
@@ -50,54 +51,50 @@ export const About = () => {
           </p>
           <p className="text-base max-sm:text-lg">
             Along the way, I've developed a propensity for problem-solving, a
-            keen ability to translate complex ideas to paper, and a love for
-            technology.
+            keen ability to translate complex ideas to their parts, and a love
+            for technology.
           </p>
         </div>
       </div>
       <div className="w-full bg-[#fafafa] border border-s-border border-solid py-5 px-6 rounded-sm">
         <h2 className="text-base mb-2.5 font-bold max-sm:text-lg">
-          My design ethos is...
+          My toolkit includes...
         </h2>
-        <p className="text-base max-sm:text-lg">
-          <span className="italic">Authenticity</span>
-          <br />
-          In an age of AI masquerading as celebrities, digital experiences
-          should be distinctly human
-        </p>
-        <p className="text-base max-sm:text-lg">
-          <span className="italic">Playfulness</span>
-          <br />
-          The design process should be fun, loose, and driven by creativity
-        </p>
-        <p className="text-base max-sm:text-lg">
-          <span className="italic">Accessibility</span>
-          <br />
-          Prioritizing inclusive and accessible design leads to better
-          experiences for <span className="italic">all</span> users
-        </p>
-        <p className="text-base max-sm:text-lg">
-          <span className="italic">Equity</span>
-          <br />
-          Design has the power to build community, affect social change, and
-          foster a just and equitable world
-        </p>
-        <p className="text-base max-sm:text-lg">
-          <span className="italic">Coherence</span>
-          <br />
-          Seamless, consistent design is not just aesthetically pleasing but
-          also paramount for enhancing usability
-        </p>
+        <div className="flex flex-col gap-6">
+          <Tools
+            customHeading="Languages"
+            toolNames={["HTML", "CSS", "JavaScript", "TypeScript", "Python"]}
+            gapClass="gap-5"
+          />
+          <Tools
+            customHeading="Frontend"
+            toolNames={["React", "TailwindCSS", "Figma"]}
+            gapClass="gap-5"
+          />
+          <Tools
+            customHeading="Backend"
+            toolNames={["Django", "Postgre", "NodeJS"]}
+            gapClass="gap-5"
+          />
+          <Tools
+            customHeading="Tools & Tech"
+            toolNames={["Git", "Raspberry Pi"]}
+            gapClass="gap-5"
+          />
+        </div>
+      </div>
+      <div className="w-full bg-[#fafafa] border border-s-border border-solid py-5 px-6 rounded-sm">
+        <h2 className="text-base mb-2.5 font-bold max-sm:text-lg">I pre</h2>
       </div>
       <div className="w-full bg-[#fafafa] border border-s-border border-solid py-5 px-6 rounded-sm">
         <h2 className="text-base mb-2.5 font-bold max-sm:text-lg ">
-          I'm a T-shaped designer who...
+          The first time I touched code, I...
         </h2>
         <p className="text-base max-sm:text-lg ">
-          has a breadth of skills across <a>content design</a>,{" "}
-          <a>product design</a>, and <a>web development</a>, with deep expertise
-          in content strategy, information architecture, web accessibility, and
-          design thinking.
+          was 10 years old and creating fan sites for my favorite celebrities of
+          the time{" "}
+          <span className="italic">(see: Ashlee Simpson & Miley Cyrus)</span>{" "}
+          with custom HTML & CSS
         </p>
       </div>
       <div className="w-full bg-[#fafafa] border border-s-border border-solid py-5 px-6 rounded-sm">

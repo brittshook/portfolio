@@ -30,10 +30,8 @@ export const Work = () => {
   }, []);
 
   return (
-    <Page type="main" id="work" gapClass="gap-4">
-      <h1 className="text-xl font-bold mb-2.5 max-sm:text-2-xl">
-        Recent Projects
-      </h1>
+    <Page type="main" id="work" gapClass="gap-2">
+      <h1 className="text-xl font-bold max-sm:text-2-xl">Recent Projects</h1>
       <Filter
         filterCategories={["software engineering", "UX design"]}
         onSelectCategory={handleSelectCategory}

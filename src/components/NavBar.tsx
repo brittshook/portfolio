@@ -101,19 +101,15 @@ export const NavBar = ({ isCaseStudy, items, subNav }: Props) => {
   const toggleMenu = () => setMenuVisible(!menuVisible);
   const menuButtonImg = menuVisible ? "/icons/close.svg" : "/icons/menu.svg";
   const menuButtonAlt = menuVisible ? "close" : "menu";
-  const navStyles = menuVisible
-    ? { background: "var(--surface-primary, #fff)}" }
-    : {
-        background: "linear-gradient(to bottom, #ffffff33, transparent)",
-        backdropFilter: "blur(2px)",
-      };
+  const background = menuVisible
+    ? "bg-s-primary"
+    : "backdrop-blur-sm bg-gradient-tb-w";
 
   if (showMobile) {
     return (
       <>
         <nav
-          className="h-fit w-full fixed top-0 left-0 flex py-6 items-center justify-between z-20 sm:max-md:px-8 max-sm:px-5"
-          style={navStyles}
+          className={`h-fit w-full ${background} fixed top-0 left-0 flex py-6 items-center justify-between z-20 sm:max-md:px-8 max-sm:px-5`}
         >
           {location.pathname === "/" ? (
             <h1 className="text-2-xl max-sm:text-3-xl font-bold">
@@ -125,7 +121,7 @@ export const NavBar = ({ isCaseStudy, items, subNav }: Props) => {
               </Link>
             </h1>
           ) : (
-            <span className="text-2-sxl max-sm:text-3-xl font-bold">
+            <span className="text-2-xl max-sm:text-3-xl font-bold">
               <Link
                 className="text-t-primary hover:text-t-primary hover:no-underline"
                 to="/"
@@ -149,7 +145,7 @@ export const NavBar = ({ isCaseStudy, items, subNav }: Props) => {
   }
 
   return (
-    <nav className="h-fit flex flex-col sticky top-20 items-end lg:backdrop-blur-sm lg:border-r lg:border-solid lg:border-s-border lg:py-5 lg:pr-8 lg:pl-0 min-w-33.5 max-lg:w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:z-20 md:max-lg:pt-8 md:max-lg:bg-none">
+    <nav className="h-fit flex flex-col sticky top-20 items-end lg:border-r lg:border-solid lg:border-s-border lg:py-5 lg:pr-8 lg:pl-0 min-w-33.5 max-lg:w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:z-20 md:max-lg:pt-8 md:max-lg:bg-none">
       {isCaseStudy && (
         <Button
           type="button"

@@ -45,11 +45,11 @@ export const StateMedicaidAgency = () => {
         <h2 className="font-mono text-sm max-sm:text-base font-normal mb-2.5 text-t-secondary-light uppercase">
           Background
         </h2>
-        <div>
+        <div className="mb-14">
           <h3 className="text-lg max-sm:text-xl font-bold mb-4">
             A push to provide better patient care and enhanced user experiences
           </h3>
-          <p>
+          <p className="custom mb-2">
             This work existed at the nexus of two large-scale transformation
             projects:
           </p>
@@ -134,14 +134,16 @@ export const StateMedicaidAgency = () => {
         <h2 className="font-mono text-sm max-sm:text-base font-normal mb-2.5 text-t-secondary-light uppercase">
           Problem
         </h2>
-        <div>
-          <h3 className="text-lg max-sm:text-xl font-bold mb-4">Offering clear pathways for users in a complex system</h3>
+        <div className="mb-14">
+          <h3 className="text-lg max-sm:text-xl font-bold mb-4">
+            Offering clear pathways for users in a complex system
+          </h3>
           <p>
             Providers and medical billers, especially in the wake of COVID-19,
             are time-pressed and expect streamlined processes to complete tasks.
             The system migration would cause delays and disrupt workflows.
           </p>
-          <p className="font-bold">Experience Goals:</p>
+          <p className="font-bold custom mb-2">Experience Goals:</p>
           <ul className="list-disc">
             <li>
               Prioritize user needs over system-related details in our messaging
@@ -159,7 +161,7 @@ export const StateMedicaidAgency = () => {
               solution is accessible to both technical and non-technical users
             </li>
           </ul>
-          <p className="font-bold">Limitations:</p>
+          <p className="font-bold custom mb-2">Limitations:</p>
           <ul>
             <li>Use established design components</li>
             <li>Cannot differentiate content in system A based on user type</li>
@@ -171,13 +173,15 @@ export const StateMedicaidAgency = () => {
           </ul>
         </div>
         <div>
-          <h3 className="text-lg max-sm:text-xl font-bold mb-4">Breaking down the problem: pre- and post-transition</h3>
+          <h3 className="text-lg max-sm:text-xl font-bold mb-4">
+            Breaking down the problem: pre- and post-transition
+          </h3>
           <p>Essentially, the messaging can be divided into two phases:</p>
           <ol className="list-decimal">
-            <li>
-              <span className="font-bold">
+            <li className="mb-3">
+              <p className="inline-block font-bold custom mb-2">
                 Pre-transition and transition phases
-              </span>
+              </p>
               <ul>
                 <li>Messaging would occur on System A</li>
                 <li>
@@ -187,7 +191,9 @@ export const StateMedicaidAgency = () => {
               </ul>
             </li>
             <li>
-              <span className="font-bold">Post-transition phase</span>
+              <p className="inline-block font-bold custom mb-2">
+                Post-transition phase
+              </p>
               <ul>
                 <li>Messaging would shift to System B</li>
                 <li>Onboard users to the redesigned user experience</li>
@@ -200,8 +206,10 @@ export const StateMedicaidAgency = () => {
         <h2 className="font-mono text-sm max-sm:text-base font-normal mb-2.5 text-t-secondary-light uppercase">
           Phase 1: Pre-transition
         </h2>
-        <div id="pre-research">
-          <h3 className="text-lg max-sm:text-xl font-bold mb-4">Speaking with SMEs to understand needs and assess impacts</h3>
+        <div className="mb-14" id="pre-research">
+          <h3 className="text-lg max-sm:text-xl font-bold mb-4">
+            Speaking with SMEs to understand needs and assess impacts
+          </h3>
           <p>
             Due to time and budget constraints, I didn't have access to end
             users, i.e. providers and medical billers. Instead, I relied on
@@ -217,7 +225,7 @@ export const StateMedicaidAgency = () => {
             }}
           >
             <div className="py-7.5 px-4.5 flex flex-col w-full max-w-81 sm:max-md:h-full rounded-sm bg-s-medicaid text-s-primary shadow">
-              <h4 className="text-lg">Healthcare Providers</h4>
+              <h4 className="text-lg font-bold mb-2">Healthcare Providers</h4>
               <p className="text-sm">
                 Casual users, although some providers may also act as billers
               </p>
@@ -246,7 +254,7 @@ export const StateMedicaidAgency = () => {
               </ul>
             </div>
             <div className="py-7.5 px-4.5 flex flex-col w-full max-w-81 max-md:h-full rounded-sm bg-s-medicaid text-s-primary shadow">
-              <h4 className="text-lg">Medical Billers</h4>
+              <h4 className="text-lg font-bold mb-2">Medical Billers</h4>
               <p className="text-sm">
                 Professional users, could be managing a single provider or
                 entire provider groups
@@ -279,8 +287,10 @@ export const StateMedicaidAgency = () => {
             </div>
           </Callout>
         </div>
-        <div id="pre-roadmap">
-          <h3 className="text-lg max-sm:text-xl font-bold mb-4">Roadmapping to align messaging across platforms</h3>
+        <div className="mb-14" id="pre-roadmap">
+          <h3 className="text-lg max-sm:text-xl font-bold mb-4">
+            Roadmapping to align messaging across platforms
+          </h3>
           <p>
             This UX content was part of a larger messaging campaign that I
             organized across multiple channels. In addition to System A and B, I
@@ -298,7 +308,9 @@ export const StateMedicaidAgency = () => {
           />
         </div>
         <div id="pre-deliverables">
-          <h3 className="text-lg max-sm:text-xl font-bold mb-4">Deliverables</h3>
+          <h3 className="text-lg max-sm:text-xl font-bold mb-4">
+            Deliverables
+          </h3>
           <p>
             The two end users' goals felt a bit at odds – providers wanted quick
             & efficient, whereas medical billers needed precise & detailed.
@@ -329,7 +341,9 @@ export const StateMedicaidAgency = () => {
             </div>
             <hr className="h-0.5 bg-s-border mb-4.5" />
             <div className="mb-5">
-              <h4 className="text-base max-sm:text-lg font-bold mb-4">Scenario 2: Migration in-progress with ongoing impacts</h4>
+              <h4 className="text-base max-sm:text-lg font-bold mb-4">
+                Scenario 2: Migration in-progress with ongoing impacts
+              </h4>
               <EnlargeImage
                 src="/images/state_medicaid_agency/during_public.webp"
                 altText="Banner UI for System A's public portal notifying users of ongoing system impacts during transition to System B"
@@ -341,7 +355,9 @@ export const StateMedicaidAgency = () => {
             </div>
             <hr className="h-0.5 bg-s-border mb-4.5" />
             <div className="mb-5">
-              <h4 className="text-base max-sm:text-lg font-bold mb-4">Scenario 3: Migration complete at go-live</h4>
+              <h4 className="text-base max-sm:text-lg font-bold mb-4">
+                Scenario 3: Migration complete at go-live
+              </h4>
               <p>
                 Once the data was migrated and the transition complete, System A
                 would sunset. The users that did need to maintain access would
@@ -359,7 +375,7 @@ export const StateMedicaidAgency = () => {
         <h2 className="font-mono text-sm max-sm:text-base font-normal mb-2.5 text-t-secondary-light uppercase">
           Phase 2: Post-transition
         </h2>
-        <div id="post-prioritize">
+        <div className="mb-14" id="post-prioritize">
           <h3 className="text-lg max-sm:text-xl font-bold mb-4">
             The onboarding solution should prioritize healthcare provider users
           </h3>
@@ -375,7 +391,9 @@ export const StateMedicaidAgency = () => {
             billers, and helpdesk professionals may also utilize these
             resources.
           </p>
-          <p className="font-bold">Our goals for these materials were to:</p>
+          <p className="font-bold custom mb-2">
+            Our goals for these materials were to:
+          </p>
           <ul>
             <li>
               Communicate a high-level overview of the steps required to
@@ -387,8 +405,10 @@ export const StateMedicaidAgency = () => {
             <li>Create a solution that providers could easily revisit</li>
           </ul>
         </div>
-        <div id="post-research">
-          <h3 className="text-lg max-sm:text-xl font-bold mb-4">Once again, I spoke to SMEs to inform content needs</h3>
+        <div className="mb-14" id="post-research">
+          <h3 className="text-lg max-sm:text-xl font-bold mb-4">
+            Once again, I spoke to SMEs to inform content needs
+          </h3>
           <p>
             I spoke with product owners and other technical stakeholders to
             shape onboarding materials and get a better understanding of task
@@ -401,7 +421,9 @@ export const StateMedicaidAgency = () => {
           </p>
         </div>
         <div id="post-deliverables">
-          <h3 className="text-lg max-sm:text-xl font-bold mb-4">Deliverables</h3>
+          <h3 className="text-lg max-sm:text-xl font-bold mb-4">
+            Deliverables
+          </h3>
           <p>
             I created sets of visual journey maps for technical areas such as
             SSO, provider enrollment, and claims submission. Each set contained
@@ -425,7 +447,9 @@ export const StateMedicaidAgency = () => {
         <h2 className="font-mono text-sm max-sm:text-base font-normal mb-2.5 text-t-secondary-light uppercase">
           Results
         </h2>
-        <h3 className="text-lg max-sm:text-xl font-bold mb-4">Successes & Learnings</h3>
+        <h3 className="text-lg max-sm:text-xl font-bold mb-4">
+          Successes & Learnings
+        </h3>
         <p>
           Since I rolled off this project before some of this work went live, I
           don't have concrete data to share. Nevertheless, I've received

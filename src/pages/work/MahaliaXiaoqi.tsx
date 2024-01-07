@@ -324,7 +324,7 @@ export const MahaliaXiaoqi = () => {
                 src="/images/mahalia_xiaoqi/card_before.webp"
                 alt=""
               />
-              <figcaption className="text-center text-t-secondary-light">
+              <figcaption className="text-center text-sm max-sm:text-base text-t-secondary-light">
                 Before
               </figcaption>
             </div>
@@ -334,7 +334,7 @@ export const MahaliaXiaoqi = () => {
                 src="/images/mahalia_xiaoqi/card_after.webp"
                 alt=""
               />
-              <figcaption className="text-center text-t-secondary-light">
+              <figcaption className="text-center text-sm max-sm:text-base text-t-secondary-light">
                 After
               </figcaption>
             </div>

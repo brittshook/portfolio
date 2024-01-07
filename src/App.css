@@ -26,7 +26,7 @@ img {
   text-transform: lowercase;
 }
 
-p:not(p:last-child):not(p.tooltip):not(.card p),
+p:not(p:last-child):not(p.tooltip):not(.card p):not(.custom),
 ul:not(ul:last-child),
 ol:not(ul:last-child),
 .case-study img:not(img:last-child),

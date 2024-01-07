@@ -52,17 +52,23 @@ export default {
     },
     extend: {
       screens: {
+        330: "330px",
+        370: "370px",
         sm: "450px",
+        570: "570px",
         md: "750px",
         810: "810px",
         lg: "1000px",
+      },
+      backdropBlur: {
+        sm: "2px",
       },
       backgroundImage: {
         check: 'url("/icons/check_circle.svg")',
         close: 'url("/icons/close_circle.svg")',
         clock: 'url("/icons/clock_circle.svg")',
+        "gradient-tb-w": "linear-gradient(to bottom, #ffffff33, transparent)",
       },
-      blur: { sm: "1px" },
       borderRadius: {
         xs: "2px",
         sm: "3px",
@@ -86,10 +92,14 @@ export default {
         2.5: "0.625rem",
         18: "4.5rem",
       },
-      gridTemplateRows: { "3-200": "repeat(3, 200px)" },
+      gridTemplateRows: {
+        "3-200": "repeat(3, 200px)",
+        "4-180": "repeat(4, 180px)",
+      },
       height: {
         8.5: "2.375rem",
         10.5: "2.625rem",
+        18: "4.65rem",
         81.5: "20.375rem",
         82.5: "20.625rem",
         85: "21.25rem",
@@ -101,18 +111,22 @@ export default {
       },
       margin: {
         4.5: "1.125rem",
+        18: "4.5rem",
       },
       maxWidth: {
-        "2.5xl": "45rem",
         81: "20.25rem",
+        "2.5xl": "45rem",
+        "4.5xl": "57rem",
       },
       minHeight: {
         110.5: "27.625rem",
       },
       minWidth: {
         33.5: "8.375rem",
+        330: "330px",
       },
       outlineWidth: {
+        0.5: "0.5px",
         1.5: "1.5px",
       },
       padding: {
@@ -136,6 +150,11 @@ export default {
         74: "18.5rem",
         92: "23rem",
         136: "34rem",
+      },
+      spacing: {
+        18: "4.65rem",
+        104: "26rem",
+        124: "31rem",
       },
     },
   },

@@ -4,7 +4,7 @@ import { Page } from "../components/Page";
 
 export const Contact = () => {
   return (
-    <Page id="contact" type="main" gapClass="gap-2">
+    <Page id="contact" type="main" gapClass="gap-0">
       <h1 className="text-xl font-bold mb-2.5 max-sm:text-2-xl">Let's Chat</h1>
       <p className="text-base max-sm:text-lg">
         Available for new roles, projects, and coffee.

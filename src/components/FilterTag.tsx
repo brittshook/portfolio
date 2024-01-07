@@ -15,10 +15,11 @@ export const FilterTag = ({ children, active, onClick }: Props) => {
       className={{
         padding: "py-1.25 px-2.25",
         borderRadius: "rounded-lg",
-        borderWidth: active ? "border-1.5" : "border",
         background: active ? "bg-[#ededed8d]" : "bg-s-primary",
         height: "h-fit",
-        other: "font-medium",
+        other: `font-medium ${
+          active ? "outline outline-0.5 outline-[#c2baba]" : ""
+        }`,
       }}
     >
       {children}
