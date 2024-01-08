@@ -24,7 +24,7 @@ export const About = () => {
         </div>
         <div className="w-2/3 h-fit bg-[#fafafa] border border-s-border border-solid py-5 px-6 rounded-sm max-810:w-full">
           <h1 className="text-base font-bold mb-2.5 max-sm:text-lg">
-            I haven't always seen been a software engineer...
+            I haven't always been a software engineer...
           </h1>
           <p className="text-base max-sm:text-lg">
             In another life, I studied the{" "}
@@ -110,7 +110,7 @@ export const About = () => {
           >
             indie rock playlist curator
           </a>
-          , and collector of sunrise pics.
+          , and collector of sunrise pics
         </p>
       </div>
     </Page>

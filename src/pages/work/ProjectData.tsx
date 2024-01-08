@@ -101,7 +101,7 @@ const mahaliaXiaoqi = new Project({
   showGithubButton: true,
   showCaseStudyButton: true,
   categories: ["software engineering", "UX design"],
-  demoLink: "mahalia-xiaoqi-tattoos.netlify.app",
+  demoLink: "https://mahalia-xiaoqi-tattoos.netlify.app",
   githubRepoLink: "https://github.com/brittshook/mahalia",
   caseStudyPath: "/work/mahalia-xiaoqi",
   toolNames: ["HTML", "CSS", "JavaScript"],
