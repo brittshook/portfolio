@@ -140,6 +140,10 @@ export default {
         7.5: "1.875rem",
         18: "4.5rem",
       },
+      rotate: {
+        20: "20deg",
+        24: "24deg",
+      },
       translate: {
         4.5: "1.125rem",
       },

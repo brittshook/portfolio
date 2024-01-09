@@ -26,6 +26,7 @@ export const Card = ({ data }: Props) => {
     <div className="card">
       <Callout
         isCover
+        showInProgress={data.inProgress || false}
         className={{
           other: "mb-4 h-107.5 max-sm:h-82.5 cursor-pointer",
         }}

@@ -16,6 +16,7 @@ class Project {
   teamNames?: string[];
   teamRoles?: string[];
   toolNames?: string[];
+  inProgress?: boolean;
 
   constructor({
     title,
@@ -35,6 +36,7 @@ class Project {
     teamNames,
     teamRoles,
     toolNames,
+    inProgress,
   }: {
     title: string;
     subtitle: string;
@@ -53,6 +55,7 @@ class Project {
     teamNames?: string[];
     teamRoles?: string[];
     toolNames?: string[];
+    inProgress?: boolean;
   }) {
     this.title = title;
     this.subtitle = subtitle;
@@ -71,12 +74,13 @@ class Project {
     this.teamNames = teamNames;
     this.teamRoles = teamRoles;
     this.toolNames = toolNames;
+    this.inProgress = inProgress;
   }
 }
 
 const airQuality = new Project({
   title: "RESTful API for my hyper-local air quality data",
-  subtitle: "Raspberry Pi, Python, Django, PostgreSQL",
+  subtitle: "Raspberry Pi, Python, Flask, PostgreSQL",
   description: "test",
   imgSrc: "/images/test.webp",
   altText: "test",
@@ -84,9 +88,10 @@ const airQuality = new Project({
   showGithubButton: true,
   showCaseStudyButton: false,
   categories: ["software engineering"],
-  demoLink: "test",
+  demoLink:
+    "https://britt-hyper-local-aqi.readme.io/reference/getting-started-with-your-api",
   githubRepoLink: "test",
-  toolNames: ["Raspberry Pi", "Python", "Django", "PostgreSQL"],
+  toolNames: ["Raspberry Pi", "Python", "Flask", "PostgreSQL"],
   showOnHomepage: true,
 });
 
@@ -112,16 +117,17 @@ const pridePac = new Project({
   title: "Introducing Pride Pac: Queer-themed take on Pac-Man",
   subtitle: "HTML, JavaScript",
   description: "",
-  imgSrc: "/images/test.webp",
+  imgSrc: "/images/pride_pac/cover.webp",
   altText: "",
   showDemoButton: true,
   showGithubButton: true,
   showCaseStudyButton: false,
   categories: ["software engineering"],
-  demoLink: "test",
+  demoLink: "https://pride-pac.netlify.app",
   githubRepoLink: "https://github.com/brittshook/pride-pac",
   toolNames: ["HTML", "JavaScript"],
   showOnHomepage: true,
+  inProgress: true,
 });
 
 const stravaFit = new Project({

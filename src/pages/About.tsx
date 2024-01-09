@@ -73,12 +73,12 @@ export const About = () => {
           />
           <Tools
             customHeading="Backend"
-            toolNames={["Django", "Postgre", "NodeJS"]}
+            toolNames={["Flask", "Postgre", "NodeJS"]}
             gapClass="gap-5"
           />
           <Tools
             customHeading="Tools & Tech"
-            toolNames={["Git", "Raspberry Pi"]}
+            toolNames={["Git", "Postman", "Raspberry Pi"]}
             gapClass="gap-5"
           />
         </div>
