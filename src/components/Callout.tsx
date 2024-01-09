@@ -36,7 +36,7 @@ export const Callout = ({
       {children}
       {showInProgress && (
         <img
-          className="absolute bottom-12 -right-18 -rotate-24 h-12 max-570:h-9 330:max-570:bottom-8 max-570:-right-10 max-570:min-w-[400px] 330:max-570:-rotate-20 max-330:-rotate-12 max-330:bottom-1/3"
+          className="absolute bottom-16 -right-20 -rotate-24 h-12 max-570:h-9 330:max-570:bottom-8 max-570:-right-10 max-570:min-w-[400px] 330:max-570:-rotate-20 max-330:-rotate-12 max-330:bottom-1/3"
           src="/images/in_progress.webp"
           alt="in progress"
         />
