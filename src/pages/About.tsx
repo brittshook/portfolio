@@ -87,7 +87,7 @@ export const About = () => {
         <h2 className="text-base mb-2.5 font-bold max-sm:text-lg">
           I prefer to work on problems that are...
         </h2>
-        <p>
+        <p className="text-base max-sm:text-lg">
           messy and ambiguous, that push me to learn new tools and adopt new
           ways of thinking. I'm particularly excited by work that inch towards
           solutions to the wicked problem of climate change and effect real
@@ -96,7 +96,7 @@ export const About = () => {
           programs in climate-driven drought-stricken areas, and WASH Institute,
           working in the realm of water & sanitation.
         </p>
-        <p>
+        <p className="text-base max-sm:text-lg">
           Now, as a software engineer, I'm involved in this work in my home
           state of South Carolina, building a website and volunteer management
           system for OUR Strategies, a community-building organization advancing
@@ -107,7 +107,7 @@ export const About = () => {
         <h2 className="text-base mb-2.5 font-bold max-sm:text-lg ">
           The first time I touched code, I...
         </h2>
-        <p className="text-base max-sm:text-lg ">
+        <p className="text-base max-sm:text-lg">
           was 10 years old and creating fan sites for my favorite celebrities of
           the time{" "}
           <span className="italic">(see: Ashlee Simpson & Miley Cyrus)</span>{" "}
