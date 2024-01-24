@@ -60,7 +60,7 @@ export const Button = ({
     }
   };
 
-  const height = className?.height || "h-11";
+  const height = className?.height || "h-11 min-h-[44px]";
   const padding =
     className?.padding || (imgSrc?.includes("menu") ? "p-2" : "p-3");
   const background = className?.background || "bg-s-primary";
@@ -75,7 +75,7 @@ export const Button = ({
       ref={buttonRef}
       type={type}
       onClick={onClick || handleClick}
-      className={`flex items-center justify-center ${height} ${padding} ${background} hover:bg-[#f5f5f5] ${borderRadius} ${borderWidth} border-[#c2baba] border-solid text-base font-sans max-sm:text-lg text-t-secondary-light capitalize ${other} cursor-pointer min-w-[46px] min-h-[44px]`}
+      className={`flex items-center justify-center ${height} ${padding} ${background} hover:bg-[#f5f5f5] ${borderRadius} ${borderWidth} border-[#c2baba] border-solid text-base font-sans max-sm:text-lg text-t-secondary-light capitalize ${other} cursor-pointer min-w-[46px]`}
     >
       {showText && children}
       {imgSrc != null && (
