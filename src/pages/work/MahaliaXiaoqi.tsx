@@ -3,6 +3,7 @@ import { EnlargeImage } from "../../components/EnlargeImage";
 import { SubNav } from "../../components/SubNav";
 import { Page } from "../../components/Page";
 import { Callout } from "../../components/Callout";
+import { ViewDemo } from "../../components/ViewDemo";
 
 export const MahaliaXiaoqi = () => {
   return (
@@ -361,6 +362,19 @@ export const MahaliaXiaoqi = () => {
         <h2 className="font-mono text-sm max-sm:text-base font-normal mb-2.5 text-t-secondary-light uppercase">
           Development
         </h2>
+        <h3 className="text-lg max-sm:text-xl font-bold mb-4">
+          My first entrance to web development
+        </h3>
+        <p>
+          This website was my first web development project with JavaScript,
+          aside from writing small programs. Most of my progress came during my
+          self-learning journey before joining Per Scholas, and it is this
+          project that first got me comfortable with manipulating the DOM and
+          writing custom validations. As it was written in Vanilla JavaScript,
+          making the form robust took hours upon hours of effort, but in turn
+          honed my JS skills significant in ways I can appreciate looking back.
+        </p>
+        <ViewDemo />
       </section>
       <section id="next-steps">
         <h2 className="font-mono text-sm max-sm:text-base font-normal mb-2.5 text-t-secondary-light uppercase">
