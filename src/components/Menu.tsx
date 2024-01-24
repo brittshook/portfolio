@@ -26,7 +26,7 @@ export const Menu = ({ items, activeItem, onClick }: Props) => {
                     activeItem === path
                       ? "text-t-primary hover:text-t-primary font-bold cursor-default"
                       : "text-t-secondary-light  hover:text-t-secondary-dark cursor-pointer"
-                  } hover:no-underline`}
+                  } hover:no-underline text-2-xl`}
                   href={path}
                   target="_blank"
                 >
