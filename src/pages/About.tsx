@@ -60,10 +60,15 @@ export const About = () => {
         <h2 className="text-base mb-2.5 font-bold max-sm:text-lg">
           My toolkit includes...
         </h2>
-        <div className="flex flex-col gap-6">
+        <div className="grid grid-cols-2 grid-rows-2 gap-y-8">
           <Tools
             customHeading="Languages"
             toolNames={["HTML", "CSS", "JavaScript", "TypeScript", "Python"]}
+            gapClass="gap-5"
+          />
+          <Tools
+            customHeading="Tools & Tech"
+            toolNames={["Git", "Postman", "Raspberry Pi"]}
             gapClass="gap-5"
           />
           <Tools
@@ -73,18 +78,30 @@ export const About = () => {
           />
           <Tools
             customHeading="Backend"
-            toolNames={["Flask", "Postgre", "NodeJS"]}
-            gapClass="gap-5"
-          />
-          <Tools
-            customHeading="Tools & Tech"
-            toolNames={["Git", "Postman", "Raspberry Pi"]}
+            toolNames={["Flask", "Postgre", "NodeJS", "ExpressJS"]}
             gapClass="gap-5"
           />
         </div>
       </div>
       <div className="w-full bg-[#fafafa] border border-s-border border-solid py-5 px-6 rounded-sm">
-        <h2 className="text-base mb-2.5 font-bold max-sm:text-lg">I pre</h2>
+        <h2 className="text-base mb-2.5 font-bold max-sm:text-lg">
+          I prefer to work on problems that are...
+        </h2>
+        <p>
+          messy and ambiguous, that push me to learn new tools and adopt new
+          ways of thinking. I'm particularly excited by work that inch towards
+          solutions to the wicked problem of climate change and effect real
+          change in our communities. I've been grateful to tackle similar
+          problems at USAID, where I analyzed historical food assistance
+          programs in climate-driven drought-stricken areas, and WASH Institute,
+          working in the realm of water & sanitation.
+        </p>
+        <p>
+          Now, as a software engineer, I'm involved in this work in my home
+          state of South Carolina, building a website and volunteer management
+          system for OUR Strategies, a community-building organization advancing
+          environment justice for rural Black communities.
+        </p>
       </div>
       <div className="w-full bg-[#fafafa] border border-s-border border-solid py-5 px-6 rounded-sm">
         <h2 className="text-base mb-2.5 font-bold max-sm:text-lg ">
