@@ -81,16 +81,16 @@ class Project {
 const airQuality = new Project({
   title: "RESTful API for my hyper-local air quality data",
   subtitle: "Raspberry Pi, Python, Flask, PostgreSQL",
-  description: "test",
-  imgSrc: "/images/test.webp",
-  altText: "test",
+  description: "",
+  imgSrc: "/images/aqi_api.webp",
+  altText:
+    "Screen of air quality data history endpoint accessed via Postman, with a Raspberry Pi in the foreground",
   showDemoButton: true,
   showGithubButton: true,
   showCaseStudyButton: false,
   categories: ["software engineering"],
-  demoLink:
-    "https://britt-hyper-local-aqi.readme.io/reference/getting-started-with-your-api",
-  githubRepoLink: "test",
+  demoLink: "https://air-quality-api.readme.io/reference/api-getting-started",
+  githubRepoLink: "https://github.com/brittshook/air-quality-api",
   toolNames: ["Raspberry Pi", "Python", "Flask", "PostgreSQL"],
   showOnHomepage: true,
 });
