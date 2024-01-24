@@ -57,7 +57,11 @@ export const Contact = () => {
         }}
       >
         {({ isSubmitting, errors, touched }) => (
-          <Form className="w-full flex flex-col gap-5">
+          <Form
+            className="w-full flex flex-col gap-5"
+            action="https://submit-form.com/SrkN155w"
+            method="POST"
+          >
             <div className="w-full flex gap-5 max-sm:flex-col">
               <label
                 htmlFor="firstName"
