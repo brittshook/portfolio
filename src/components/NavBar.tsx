@@ -15,7 +15,7 @@ export const NavBar = ({ isCaseStudy, items, subNav }: Props) => {
     ["Home", "/"],
     ["About", "/about"],
     ["Work", "/work"],
-    ["Resume", "/resume"],
+    ["Resume", "/pdf/Resume_Brittany_Shook.pdf"],
     ["Contact", "/contact"],
   ];
 
