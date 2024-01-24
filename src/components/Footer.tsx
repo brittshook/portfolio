@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { isMobile } from "react-device-detect";
 import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css";
 
@@ -6,7 +7,7 @@ export const Footer = () => {
   const anchorRef = useRef(null);
 
   useEffect(() => {
-    if (anchorRef.current) {
+    if (anchorRef.current && !isMobile) {
       tippy(anchorRef.current, {
         content: "Play RKS on Spotify",
         arrow: true,

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { isMobile } from "react-device-detect";
 import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css";
 
@@ -40,7 +41,7 @@ export const Button = ({
   const buttonRef = useRef(null);
 
   useEffect(() => {
-    if (buttonRef.current && showTooltip) {
+    if (buttonRef.current && showTooltip && !isMobile) {
       tippy(buttonRef.current, {
         content: children,
         arrow: false,
