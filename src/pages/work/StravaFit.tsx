@@ -413,7 +413,7 @@ export const StravaFit = () => {
                 autoPlay={true}
                 muted={true}
                 loop={true}
-                className="w-64 h-fit object-contain sm:max-md:w-56"
+                className="w-64 h-fit object-contain sm:max-md:w-56 max-h-[475px]"
               />
               <figcaption className="text-center text-sm max-sm:text-base text-t-secondary-light">
                 Before
@@ -426,7 +426,7 @@ export const StravaFit = () => {
                 autoPlay={true}
                 muted={true}
                 loop={true}
-                className="w-64 h-fit object-contain sm:max-md:w-56"
+                className="w-64 h-fit object-contain sm:max-md:w-56 max-h-[475px]"
               />
               <figcaption className="text-center text-sm max-sm:text-base text-t-secondary-light">
                 After

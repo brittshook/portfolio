@@ -22,7 +22,7 @@ export const ViewDemo = ({ customLabel }: Props) => {
         altText="demo"
         showTooltip={false}
         goToExternalPage={data!.demoLink}
-        className={{ other: "max-sm:w-full" }}
+        className={{ other: "max-sm:w-full max-w-[46px] max-h-[44px]" }}
       ></Button>
     </div>
   );
