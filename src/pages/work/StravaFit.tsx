@@ -5,6 +5,7 @@ import { Video } from "../../components/Video";
 import { SubNav } from "../../components/SubNav";
 import { Page } from "../../components/Page";
 import { Callout } from "../../components/Callout";
+import { ViewDemo } from "../../components/ViewDemo";
 
 export const StravaFit = () => {
   return (
@@ -439,8 +440,23 @@ export const StravaFit = () => {
           Development
         </h2>
         <div className="mb-14">
-          <h3 className="text-lg max-sm:text-xl font-bold mb-4">Text here</h3>
+          <h3 className="text-lg max-sm:text-xl font-bold mb-4">
+            Building StravaFit
+          </h3>
+          <p>
+            George served as the primary developer and did an incredible job in
+            bringing this project to life, using React and Locofy.ai. Currently,
+            I am working on a tweaking a few of the React components to fine
+            tune the UI.
+          </p>
+          <p>Hear George's perspective of this project in his LinkedIn post:</p>
+          <iframe
+            className="w-full h-85 border-s-border border-solid border rounded-lg"
+            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7152897479456247809"
+            title="Embedded post"
+          ></iframe>
         </div>
+        <ViewDemo />
       </section>
     </Page>
   );
