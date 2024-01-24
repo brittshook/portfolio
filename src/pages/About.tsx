@@ -60,7 +60,7 @@ export const About = () => {
         <h2 className="text-base mb-2.5 font-bold max-sm:text-lg">
           My toolkit includes...
         </h2>
-        <div className="grid grid-cols-2 grid-rows-2 gap-y-8">
+        <div className="grid grid-cols-2 grid-rows-2 gap-y-8 max-md:grid-cols-1 max-md:grid-rows-4">
           <Tools
             customHeading="Languages"
             toolNames={["HTML", "CSS", "JavaScript", "TypeScript", "Python"]}

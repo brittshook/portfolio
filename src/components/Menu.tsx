@@ -20,16 +20,30 @@ export const Menu = ({ items, activeItem, onClick }: Props) => {
             onClick={activeItem === path ? onClick : undefined}
           >
             {path.startsWith("/") ? (
-              <Link
-                className={`capitalize ${
-                  activeItem === path
-                    ? "text-t-primary hover:text-t-primary font-bold cursor-default"
-                    : "text-t-secondary-light hover:text-t-secondary-dark cursor-pointer"
-                } hover:no-underline text-2-xl`}
-                to={path}
-              >
-                {item}
-              </Link>
+              path.startsWith("/pdf") ? (
+                <a
+                  className={`capitalize ${
+                    activeItem === path
+                      ? "text-t-primary hover:text-t-primary font-bold cursor-default"
+                      : "text-t-secondary-light  hover:text-t-secondary-dark cursor-pointer"
+                  } hover:no-underline`}
+                  href={path}
+                  target="_blank"
+                >
+                  {item}
+                </a>
+              ) : (
+                <Link
+                  className={`capitalize ${
+                    activeItem === path
+                      ? "text-t-primary hover:text-t-primary font-bold cursor-default"
+                      : "text-t-secondary-light hover:text-t-secondary-dark cursor-pointer"
+                  } hover:no-underline text-2-xl`}
+                  to={path}
+                >
+                  {item}
+                </Link>
+              )
             ) : (
               <a href={path}>{item}</a>
             )}
