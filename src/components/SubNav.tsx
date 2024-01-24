@@ -19,12 +19,10 @@ export const SubNav = ({ items, color }: Props) => {
 
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log(entry);
             const sectionTop = entry.boundingClientRect.top;
             const sectionBottom = entry.boundingClientRect.bottom;
 
             if (sectionTop < viewportMiddle && sectionTop > maxCrossedTop) {
-              console.log(entry.target.id, "crossed mid");
               maxCrossedTop = sectionTop;
               maxCrossedId = entry.target.id;
             }

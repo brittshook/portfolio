@@ -56,7 +56,6 @@ export const NavBar = ({ isCaseStudy, items, subNav }: Props) => {
 
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              console.log(entry);
               const sectionTop = entry.boundingClientRect.top;
               const sectionBottom = entry.boundingClientRect.bottom;
 
@@ -210,7 +209,7 @@ export const NavBar = ({ isCaseStudy, items, subNav }: Props) => {
               subNav &&
               subNav
                 .filter(([subNavItem]) => subNavItem === item)
-                .map(([, subNavNode]) => subNavNode)}
+                .map(([, subNavNode], i) => <div key={i}>{subNavNode}</div>)}
           </li>
         ))}
       </ul>
