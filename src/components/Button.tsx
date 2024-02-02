@@ -23,6 +23,7 @@ type Props = {
     height?: string;
     other?: string;
   };
+  disabled?: boolean;
 };
 
 export const Button = ({
@@ -37,6 +38,7 @@ export const Button = ({
   onClick,
   id,
   className,
+  disabled,
 }: Props) => {
   const buttonRef = useRef(null);
 
@@ -76,6 +78,7 @@ export const Button = ({
       type={type}
       onClick={onClick || handleClick}
       className={`flex items-center justify-center ${height} ${padding} ${background} hover:bg-[#f5f5f5] ${borderRadius} ${borderWidth} border-[#c2baba] border-solid text-base font-sans max-sm:text-lg text-t-secondary-light capitalize ${other} cursor-pointer min-w-[46px]`}
+      disabled={disabled}
     >
       {showText && children}
       {imgSrc != null && (
