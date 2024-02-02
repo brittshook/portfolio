@@ -3,7 +3,7 @@
   publish = "build"
 
 [[plugins]]
-  package = "netlify-plugin-vite"
+  package = "netlify-plugin-inline-functions-env"
 
 [[redirects]]
   from = "/*"
