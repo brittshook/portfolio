@@ -35,8 +35,7 @@ export const Home = () => {
         )}
         <p className="text-base max-sm:text-lg">
           Full-stack software engineer and compassionate problem-solver,
-          currently working to advance environmental justice for Black South
-          Carolinians @ OUR Strategies.
+          currently working as a Community Advocate at Designlab.
         </p>
         <p className="text-t-secondary-dark text-base max-sm:text-lg">
           Previously at Deloitte & Optum.
