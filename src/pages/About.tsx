@@ -94,13 +94,7 @@ export const About = () => {
           change in our communities. I've been grateful to tackle similar
           problems at USAID, where I analyzed historical food assistance
           programs in climate-driven drought-stricken areas, and WASH Institute,
-          working in the realm of water & sanitation.
-        </p>
-        <p className="text-base max-sm:text-lg">
-          Now, as a software engineer, I'm involved in this work in my home
-          state of South Carolina, building a website and volunteer management
-          system for OUR Strategies, a community-building organization advancing
-          environment justice for rural Black communities.
+          working in the realm of water & sanitation. Now, as a software engineer, I'm excited to contribute to this industry from a new angle.
         </p>
       </div>
       <div className="w-full bg-[#fafafa] border border-s-border border-solid py-5 px-6 rounded-sm">
